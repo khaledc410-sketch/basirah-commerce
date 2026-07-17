@@ -1,0 +1,589 @@
+{
+  "report": {
+    "domain": "zahraa-sa.com",
+    "score": 82,
+    "coverage": 79,
+    "confidence": 79,
+    "components": [
+      {
+        "key": "technical",
+        "label": "الجاهزية التقنية",
+        "weight": 25,
+        "score": 100,
+        "coverage": 83
+      },
+      {
+        "key": "content",
+        "label": "قيمة المحتوى واكتماله",
+        "weight": 30,
+        "score": 100,
+        "coverage": 83
+      },
+      {
+        "key": "entity",
+        "label": "وضوح العلامة والكيان",
+        "weight": 10,
+        "score": 0,
+        "coverage": 83
+      },
+      {
+        "key": "trust",
+        "label": "الثقة والسلطة",
+        "weight": 15,
+        "score": 50,
+        "coverage": 83
+      },
+      {
+        "key": "answerability",
+        "label": "الوضوح والفائدة للقارئ",
+        "weight": 10,
+        "score": 100,
+        "coverage": 83
+      },
+      {
+        "key": "structuredData",
+        "label": "البيانات المنظمة",
+        "weight": 5,
+        "score": 100,
+        "coverage": 83
+      },
+      {
+        "key": "externalEvidence",
+        "label": "الأدلة الخارجية",
+        "weight": 5,
+        "score": null,
+        "coverage": 0
+      }
+    ],
+    "findings": [
+      {
+        "id": "finding-trust-contact-details",
+        "component": "trust",
+        "title": "بيانات التواصل غير واضحة",
+        "description": "لا يستطيع الزائر أو محرك الإجابة استخراج وسيلة اتصال مباشرة.",
+        "severity": "medium",
+        "recommendation": "أضف بيانات تواصل صحيحة ومتسقة في صفحة التواصل والتذييل.",
+        "evidenceIds": [
+          "ev-trust-contact-details"
+        ]
+      },
+      {
+        "id": "finding-entity-identity-page",
+        "component": "entity",
+        "title": "سياق العلامة محدود",
+        "description": "لا تظهر صفحة تعريف أو تواصل واضحة في الروابط التي اكتشفناها.",
+        "severity": "low",
+        "recommendation": "أنشئ صفحة من نحن موثقة وصفحة تواصل واربطهما من التنقل الرئيسي أو التذييل.",
+        "evidenceIds": [
+          "ev-entity-identity-page"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev-technical-crawlable-pages",
+        "component": "technical",
+        "checkKey": "crawlable-pages",
+        "status": "pass",
+        "message": "تمكنت بصيرة من قراءة 10 صفحة HTML عامة.",
+        "urls": []
+      },
+      {
+        "id": "ev-technical-googlebot-root-access",
+        "component": "technical",
+        "checkKey": "googlebot-root-access",
+        "status": "pass",
+        "message": "يسمح robots.txt لـ Googlebot بقراءة الصفحة الرئيسية.",
+        "urls": [
+          "https://zahraa-sa.com/"
+        ]
+      },
+      {
+        "id": "ev-technical-oai-searchbot-root-access",
+        "component": "technical",
+        "checkKey": "oai-searchbot-root-access",
+        "status": "pass",
+        "message": "يسمح robots.txt لـ OAI-SearchBot بقراءة الصفحة الرئيسية.",
+        "urls": [
+          "https://zahraa-sa.com/"
+        ]
+      },
+      {
+        "id": "ev-externalEvidence-gptbot-training-control",
+        "component": "externalEvidence",
+        "checkKey": "gptbot-training-control",
+        "status": "unknown",
+        "message": "GPTBot مسموح على الصفحة الرئيسية؛ هذا إعداد تدريب محتمل ولا يقيس ظهور بحث ChatGPT.",
+        "urls": [
+          "https://zahraa-sa.com/"
+        ]
+      },
+      {
+        "id": "ev-externalEvidence-google-extended-training-control",
+        "component": "externalEvidence",
+        "checkKey": "google-extended-training-control",
+        "status": "unknown",
+        "message": "Google-Extended مسموح على الصفحة الرئيسية؛ هذا تحكم في استخدامات Gemini وليس شرطًا لميزات Google Search.",
+        "urls": [
+          "https://zahraa-sa.com/"
+        ]
+      },
+      {
+        "id": "ev-technical-root-indexability",
+        "component": "technical",
+        "checkKey": "root-indexability",
+        "status": "pass",
+        "message": "لم تعلن الصفحة الرئيسية توجيه noindex.",
+        "urls": []
+      },
+      {
+        "id": "ev-technical-sitemap",
+        "component": "technical",
+        "checkKey": "sitemap",
+        "status": "pass",
+        "message": "عُثر على خريطة موقع تضم 82 رابطًا.",
+        "urls": []
+      },
+      {
+        "id": "ev-technical-canonical-coverage",
+        "component": "technical",
+        "checkKey": "canonical-coverage",
+        "status": "pass",
+        "message": "100٪ من الصفحات المفحوصة تعلن canonical.",
+        "urls": []
+      },
+      {
+        "id": "ev-content-metadata-coverage",
+        "component": "content",
+        "checkKey": "metadata-coverage",
+        "status": "pass",
+        "message": "100٪ من الصفحات لديها عنوان ووصف تعريفيان.",
+        "urls": []
+      },
+      {
+        "id": "ev-content-language-coverage",
+        "component": "content",
+        "checkKey": "language-coverage",
+        "status": "pass",
+        "message": "100٪ من الصفحات تحتوي محتوى عربيًا جوهريًا.",
+        "urls": []
+      },
+      {
+        "id": "ev-content-content-depth",
+        "component": "content",
+        "checkKey": "content-depth",
+        "status": "unknown",
+        "message": "سُجل حجم النص المرئي كدليل سياقي فقط؛ لا يوجد طول مثالي ثابت للصفحة، ولا يمكن للفاحص الحتمي وحده الحكم على أصالة المحتوى أو فائدته.",
+        "urls": [
+          "https://zahraa-sa.com/",
+          "https://zahraa-sa.com/%D9%85%D9%8A%D9%84%D9%8A-%D9%83%D8%B1%D9%8A%D9%85-%D8%AA%D8%B5%D9%81%D9%8A%D9%81-%D8%A7%D9%84%D8%B4%D8%B9%D8%B1-%D8%A7%D9%84%D9%8A%D9%88%D9%85%D9%8A-%D8%A8%D8%A7%D9%83%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%AC%D8%A8%D9%84-%D9%88%D8%A7%D9%84%D9%86%D8%B9%D9%86%D8%A7%D8%B9-240%D9%85%D9%84/p959083217",
+          "https://zahraa-sa.com/%D9%85%D9%8A%D9%84%D9%8A-%D8%AC%D9%84-%D8%AA%D9%82%D9%88%D9%8A%D8%A9-%D8%A7%D8%B7%D8%B1%D8%A7%D9%81-%D8%A7%D9%84%D8%B4%D8%B9%D8%B1-%D8%A8%D8%A7%D9%83%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%AC%D8%A8%D9%84-%D9%88%D8%A7%D9%84%D9%86%D8%B9%D9%86%D8%A7%D8%B9-57-%D8%AC%D9%85/p8912605",
+          "https://zahraa-sa.com/%D8%B9%D9%86%D8%A7%D9%8A%D9%87-%D8%A8%D8%A7%D9%84%D8%A8%D8%B4%D8%B1%D8%A9/c1515641156",
+          "https://zahraa-sa.com/%D8%B9%D9%86%D8%A7%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%B4%D8%B9%D8%B1/c875821125",
+          "https://zahraa-sa.com/%D8%B9%D9%86%D8%A7%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%AC%D8%B3%D9%85/c102238022",
+          "https://zahraa-sa.com/%C3%99%C2%85%C3%99%C2%86-%C3%99%C2%86%C3%98%C2%AD%C3%99%C2%86/page-1886742693",
+          "https://zahraa-sa.com/%C3%98%C2%A7%C3%99%C2%84%C3%98%C2%B4%C3%98%C2%B1%C3%99%C2%88%C3%98%C2%B7-%C3%99%C2%88%C3%98%C2%A7%C3%99%C2%84%C3%98%C2%A3%C3%98%C2%AD%C3%99%C2%83%C3%98%C2%A7%C3%99%C2%85/page-1112700838",
+          "https://zahraa-sa.com/%C3%98%C2%B3%C3%99%C2%8A%C3%98%C2%A7%C3%98%C2%B3%C3%98%C2%A9-%C3%98%C2%A7%C3%99%C2%84%C3%98%C2%A7%C3%98%C2%B3%C3%98%C2%AA%C3%98%C2%A8%C3%98%C2%AF%C3%98%C2%A7%C3%99%C2%84-%C3%99%C2%88%C3%98%C2%A7%C3%99%C2%84%C3%98%C2%A7%C3%98%C2%B3%C3%98%C2%AA%C3%98%C2%B1%C3%98%C2%AC%C3%98%C2%A7%C3%98%C2%B9/page-1845867936",
+          "https://zahraa-sa.com/%C3%98%C2%B3%C3%99%C2%8A%C3%98%C2%A7%C3%98%C2%B3%C3%98%C2%A9-%C3%98%C2%A7%C3%99%C2%84%C3%98%C2%AE%C3%98%C2%B5%C3%99%C2%88%C3%98%C2%B5%C3%99%C2%8A%C3%98%C2%A9/page-1004721313"
+        ]
+      },
+      {
+        "id": "ev-structuredData-organization-schema",
+        "component": "structuredData",
+        "checkKey": "organization-schema",
+        "status": "pass",
+        "message": "عُثر على كيان Organization أو LocalBusiness منظم.",
+        "urls": []
+      },
+      {
+        "id": "ev-entity-identity-page",
+        "component": "entity",
+        "checkKey": "identity-page",
+        "status": "fail",
+        "message": "لم يظهر رابط واضح لصفحة من نحن أو التواصل.",
+        "urls": []
+      },
+      {
+        "id": "ev-trust-policy-coverage",
+        "component": "trust",
+        "checkKey": "policy-coverage",
+        "status": "pass",
+        "message": "عُثر على 4 من أنواع صفحات السياسات الأساسية.",
+        "urls": []
+      },
+      {
+        "id": "ev-trust-contact-details",
+        "component": "trust",
+        "checkKey": "contact-details",
+        "status": "fail",
+        "message": "لم نعثر على بريد أو هاتف واضح في الصفحات المفحوصة.",
+        "urls": []
+      },
+      {
+        "id": "ev-answerability-heading-structure",
+        "component": "answerability",
+        "checkKey": "heading-structure",
+        "status": "pass",
+        "message": "70٪ من الصفحات تستخدم عنوان H1 واحدًا.",
+        "urls": [
+          "https://zahraa-sa.com/",
+          "https://zahraa-sa.com/%D9%85%D9%8A%D9%84%D9%8A-%D9%83%D8%B1%D9%8A%D9%85-%D8%AA%D8%B5%D9%81%D9%8A%D9%81-%D8%A7%D9%84%D8%B4%D8%B9%D8%B1-%D8%A7%D9%84%D9%8A%D9%88%D9%85%D9%8A-%D8%A8%D8%A7%D9%83%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%AC%D8%A8%D9%84-%D9%88%D8%A7%D9%84%D9%86%D8%B9%D9%86%D8%A7%D8%B9-240%D9%85%D9%84/p959083217",
+          "https://zahraa-sa.com/%D9%85%D9%8A%D9%84%D9%8A-%D8%AC%D9%84-%D8%AA%D9%82%D9%88%D9%8A%D8%A9-%D8%A7%D8%B7%D8%B1%D8%A7%D9%81-%D8%A7%D9%84%D8%B4%D8%B9%D8%B1-%D8%A8%D8%A7%D9%83%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%AC%D8%A8%D9%84-%D9%88%D8%A7%D9%84%D9%86%D8%B9%D9%86%D8%A7%D8%B9-57-%D8%AC%D9%85/p8912605"
+        ]
+      },
+      {
+        "id": "ev-answerability-question-content",
+        "component": "answerability",
+        "checkKey": "question-content",
+        "status": "unknown",
+        "message": "عُثر على أسئلة أو FAQ؛ سُجلت كدليل سياقي لأنها مفيدة فقط عندما تخدم حاجة حقيقية للقارئ.",
+        "urls": []
+      },
+      {
+        "id": "ev-structuredData-jsonld-validity",
+        "component": "structuredData",
+        "checkKey": "jsonld-validity",
+        "status": "pass",
+        "message": "100٪ من الصفحات تحتوي JSON-LD صالحًا.",
+        "urls": []
+      },
+      {
+        "id": "ev-structuredData-product-schema",
+        "component": "structuredData",
+        "checkKey": "product-schema",
+        "status": "pass",
+        "message": "عُثر على Product schema ضمن العينة.",
+        "urls": []
+      },
+      {
+        "id": "ev-externalEvidence-external-mentions",
+        "component": "externalEvidence",
+        "checkKey": "external-mentions",
+        "status": "unknown",
+        "message": "لا يقيس فحص الموقع وحده الإشارات أو الاستشهادات الخارجية.",
+        "urls": []
+      },
+      {
+        "id": "ev-technical-page-fetch-coverage",
+        "component": "technical",
+        "checkKey": "page-fetch-coverage",
+        "status": "unknown",
+        "message": "تعذر التحقق من 2 رابطًا مرشحًا، لذلك خُفضت التغطية دون احتسابها كفشل.",
+        "urls": [
+          "https://zahraa-sa.com/%D8%AF%D9%83%D8%AA%D9%88%D8%B1-%D9%85%D9%8A%D9%84%D8%A7%D9%83%D8%B3%D9%8A%D9%86-%D8%A8%D8%AE%D8%A7%D8%AE-%D8%AA%D9%82%D8%B4%D9%8A%D8%B1-%D8%A7%D9%84%D8%AC%D8%B3%D9%85-%D8%A8%D8%A7%D9%84%D9%83%D9%88%D8%AC%D9%8A%D9%83-%D8%A3%D8%B3%D9%8A%D8%AF-%D9%88%D8%A7%D9%84%D9%83%D8%B1%D9%83%D9%85-200-%D9%85%D9%84/p1588905477",
+          "https://zahraa-sa.com/%D9%85%D9%8A%D8%AF%D9%8A%D9%83%D9%8A%D9%88%D8%A8-%D8%A8%D8%AE%D8%A7%D8%AE-%D9%85%D9%82%D8%B4%D8%B1-%D9%84%D9%84%D8%AC%D8%B3%D9%85-%D9%85%D8%B9%D8%A7%D9%84%D8%AC-%D9%84%D8%AD%D8%A8-%D8%A7%D9%84%D8%B4%D8%A8%D8%A7%D8%A8-110-%D8%AC%D9%85/p680649990"
+        ]
+      }
+    ],
+    "organicGrowthPlan": {
+      "source": "deterministic-public-pages",
+      "keywordMethod": "مرشحات موضوعية من عناوين الصفحات والعنوان الرئيسي في العينة؛ لا تتضمن حجم البحث أو صعوبة الكلمة قبل ربط مشرفي بحث غوغل أو مصدر كلمات موثوق.",
+      "pageSnapshots": [
+        {
+          "url": "https://zahraa-sa.com/",
+          "kind": "home",
+          "title": "zahraa-sa متجر العناية بالبشرة والشعر والجسم بأفضل الأسعار في السعود",
+          "descriptionPresent": true,
+          "wordCount": 381,
+          "h1Count": 9,
+          "questionHeadingCount": 1,
+          "structuredDataTypes": [
+            "Organization"
+          ]
+        },
+        {
+          "url": "https://zahraa-sa.com/%D9%85%D9%8A%D9%84%D9%8A-%D9%83%D8%B1%D9%8A%D9%85-%D8%AA%D8%B5%D9%81%D9%8A%D9%81-%D8%A7%D9%84%D8%B4%D8%B9%D8%B1-%D8%A7%D9%84%D9%8A%D9%88%D9%85%D9%8A-%D8%A8%D8%A7%D9%83%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%AC%D8%A8%D9%84-%D9%88%D8%A7%D9%84%D9%86%D8%B9%D9%86%D8%A7%D8%B9-240%D9%85%D9%84/p959083217",
+          "kind": "product",
+          "title": "ميلي - كريم تصفيف الشعر اليومي باكليل الجبل والنعناع 240مل | zahraa-sa",
+          "descriptionPresent": true,
+          "wordCount": 566,
+          "h1Count": 2,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Offer",
+            "Organization",
+            "Product",
+            "Review"
+          ]
+        },
+        {
+          "url": "https://zahraa-sa.com/%D9%85%D9%8A%D9%84%D9%8A-%D8%AC%D9%84-%D8%AA%D9%82%D9%88%D9%8A%D8%A9-%D8%A7%D8%B7%D8%B1%D8%A7%D9%81-%D8%A7%D9%84%D8%B4%D8%B9%D8%B1-%D8%A8%D8%A7%D9%83%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%AC%D8%A8%D9%84-%D9%88%D8%A7%D9%84%D9%86%D8%B9%D9%86%D8%A7%D8%B9-57-%D8%AC%D9%85/p8912605",
+          "kind": "product",
+          "title": "ميلي - جل تقوية اطراف الشعر باكليل الجبل والنعناع 57 جم | zahraa-sa",
+          "descriptionPresent": true,
+          "wordCount": 316,
+          "h1Count": 2,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Offer",
+            "Organization",
+            "Product",
+            "Review"
+          ]
+        },
+        {
+          "url": "https://zahraa-sa.com/%D8%B9%D9%86%D8%A7%D9%8A%D9%87-%D8%A8%D8%A7%D9%84%D8%A8%D8%B4%D8%B1%D8%A9/c1515641156",
+          "kind": "category",
+          "title": "منتجات مختارة لبشرة صحية ونضرة كل يوم | zahraa-sa",
+          "descriptionPresent": true,
+          "wordCount": 112,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Organization"
+          ]
+        },
+        {
+          "url": "https://zahraa-sa.com/%D8%B9%D9%86%D8%A7%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%B4%D8%B9%D8%B1/c875821125",
+          "kind": "category",
+          "title": "حلول متكاملة لشعر قوي ولامع وجذاب | zahraa-sa",
+          "descriptionPresent": true,
+          "wordCount": 111,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Organization"
+          ]
+        },
+        {
+          "url": "https://zahraa-sa.com/%D8%B9%D9%86%D8%A7%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%AC%D8%B3%D9%85/c102238022",
+          "kind": "category",
+          "title": "عناية يومية تمنح جسمك النعومة والانتعاش | zahraa-sa",
+          "descriptionPresent": true,
+          "wordCount": 111,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Organization"
+          ]
+        },
+        {
+          "url": "https://zahraa-sa.com/%C3%99%C2%85%C3%99%C2%86-%C3%99%C2%86%C3%98%C2%AD%C3%99%C2%86/page-1886742693",
+          "kind": "other",
+          "title": "من نحن تعرف على متجرنا وخدماتنا المميزة - zahraa-sa متجر العناية بالبشرة والشعر والجسم بأفضل الأسعار في السعود",
+          "descriptionPresent": true,
+          "wordCount": 187,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Organization"
+          ]
+        },
+        {
+          "url": "https://zahraa-sa.com/%C3%98%C2%A7%C3%99%C2%84%C3%98%C2%B4%C3%98%C2%B1%C3%99%C2%88%C3%98%C2%B7-%C3%99%C2%88%C3%98%C2%A7%C3%99%C2%84%C3%98%C2%A3%C3%98%C2%AD%C3%99%C2%83%C3%98%C2%A7%C3%99%C2%85/page-1112700838",
+          "kind": "policy",
+          "title": "الشروط والأحكام سياسة الاستخدام والشراء من المتجر - zahraa-sa متجر العناية بالبشرة والشعر والجسم بأفضل الأسعار في السعود",
+          "descriptionPresent": true,
+          "wordCount": 310,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Organization"
+          ]
+        },
+        {
+          "url": "https://zahraa-sa.com/%C3%98%C2%B3%C3%99%C2%8A%C3%98%C2%A7%C3%98%C2%B3%C3%98%C2%A9-%C3%98%C2%A7%C3%99%C2%84%C3%98%C2%A7%C3%98%C2%B3%C3%98%C2%AA%C3%98%C2%A8%C3%98%C2%AF%C3%98%C2%A7%C3%99%C2%84-%C3%99%C2%88%C3%98%C2%A7%C3%99%C2%84%C3%98%C2%A7%C3%98%C2%B3%C3%98%C2%AA%C3%98%C2%B1%C3%98%C2%AC%C3%98%C2%A7%C3%98%C2%B9/page-1845867936",
+          "kind": "policy",
+          "title": "سياسة الاستبدال والاسترجاع ضمان رضا العملاء - zahraa-sa متجر العناية بالبشرة والشعر والجسم بأفضل الأسعار في السعود",
+          "descriptionPresent": true,
+          "wordCount": 316,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Organization"
+          ]
+        },
+        {
+          "url": "https://zahraa-sa.com/%C3%98%C2%B3%C3%99%C2%8A%C3%98%C2%A7%C3%98%C2%B3%C3%98%C2%A9-%C3%98%C2%A7%C3%99%C2%84%C3%98%C2%AE%C3%98%C2%B5%C3%99%C2%88%C3%98%C2%B5%C3%99%C2%8A%C3%98%C2%A9/page-1004721313",
+          "kind": "policy",
+          "title": "سياسة الاستخدام و الخصوصية حماية بياناتك وأمان معلوماتك - zahraa-sa متجر العناية بالبشرة والشعر والجسم بأفضل الأسعار في السعود",
+          "descriptionPresent": true,
+          "wordCount": 304,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Organization"
+          ]
+        }
+      ],
+      "keywordOpportunities": [
+        {
+          "keyword": "كريم تصفيف الشعر اليومي باكليل الجبل والنعناع 240مل",
+          "intent": "transactional",
+          "targetUrl": "https://zahraa-sa.com/%D9%85%D9%8A%D9%84%D9%8A-%D9%83%D8%B1%D9%8A%D9%85-%D8%AA%D8%B5%D9%81%D9%8A%D9%81-%D8%A7%D9%84%D8%B4%D8%B9%D8%B1-%D8%A7%D9%84%D9%8A%D9%88%D9%85%D9%8A-%D8%A8%D8%A7%D9%83%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%AC%D8%A8%D9%84-%D9%88%D8%A7%D9%84%D9%86%D8%B9%D9%86%D8%A7%D8%B9-240%D9%85%D9%84/p959083217",
+          "source": "title",
+          "confidence": "high",
+          "rationale": "مرشح مستخرج من العنوان أو H1 الحالي في صفحة منتج؛ يجب التحقق من الطلب والانطباعات داخل أدوات مشرفي بحث غوغل قبل اعتماده."
+        },
+        {
+          "keyword": "جل تقوية اطراف الشعر باكليل الجبل والنعناع 57 جم",
+          "intent": "transactional",
+          "targetUrl": "https://zahraa-sa.com/%D9%85%D9%8A%D9%84%D9%8A-%D8%AC%D9%84-%D8%AA%D9%82%D9%88%D9%8A%D8%A9-%D8%A7%D8%B7%D8%B1%D8%A7%D9%81-%D8%A7%D9%84%D8%B4%D8%B9%D8%B1-%D8%A8%D8%A7%D9%83%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%AC%D8%A8%D9%84-%D9%88%D8%A7%D9%84%D9%86%D8%B9%D9%86%D8%A7%D8%B9-57-%D8%AC%D9%85/p8912605",
+          "source": "title",
+          "confidence": "high",
+          "rationale": "مرشح مستخرج من العنوان أو H1 الحالي في صفحة منتج؛ يجب التحقق من الطلب والانطباعات داخل أدوات مشرفي بحث غوغل قبل اعتماده."
+        },
+        {
+          "keyword": "منتجات مختارة لبشرة صحية ونضرة كل يوم",
+          "intent": "commercial",
+          "targetUrl": "https://zahraa-sa.com/%D8%B9%D9%86%D8%A7%D9%8A%D9%87-%D8%A8%D8%A7%D9%84%D8%A8%D8%B4%D8%B1%D8%A9/c1515641156",
+          "source": "title",
+          "confidence": "high",
+          "rationale": "مرشح مستخرج من العنوان أو H1 الحالي في صفحة فئة؛ يجب التحقق من الطلب والانطباعات داخل أدوات مشرفي بحث غوغل قبل اعتماده."
+        },
+        {
+          "keyword": "حلول متكاملة لشعر قوي ولامع وجذاب",
+          "intent": "commercial",
+          "targetUrl": "https://zahraa-sa.com/%D8%B9%D9%86%D8%A7%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%B4%D8%B9%D8%B1/c875821125",
+          "source": "title",
+          "confidence": "high",
+          "rationale": "مرشح مستخرج من العنوان أو H1 الحالي في صفحة فئة؛ يجب التحقق من الطلب والانطباعات داخل أدوات مشرفي بحث غوغل قبل اعتماده."
+        },
+        {
+          "keyword": "عناية يومية تمنح جسمك النعومة والانتعاش",
+          "intent": "commercial",
+          "targetUrl": "https://zahraa-sa.com/%D8%B9%D9%86%D8%A7%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%AC%D8%B3%D9%85/c102238022",
+          "source": "title",
+          "confidence": "high",
+          "rationale": "مرشح مستخرج من العنوان أو H1 الحالي في صفحة فئة؛ يجب التحقق من الطلب والانطباعات داخل أدوات مشرفي بحث غوغل قبل اعتماده."
+        },
+        {
+          "keyword": "zahraa-sa متجر العناية بالبشرة والشعر والجسم بأفضل الأسعار في السعود",
+          "intent": "navigational",
+          "targetUrl": "https://zahraa-sa.com/",
+          "source": "title",
+          "confidence": "high",
+          "rationale": "مرشح مستخرج من العنوان أو H1 الحالي في صفحة الموقع؛ يجب التحقق من الطلب والانطباعات داخل أدوات مشرفي بحث غوغل قبل اعتماده."
+        }
+      ],
+      "productEnhancements": [
+        {
+          "url": "https://zahraa-sa.com/%D9%85%D9%8A%D9%84%D9%8A-%D9%83%D8%B1%D9%8A%D9%85-%D8%AA%D8%B5%D9%81%D9%8A%D9%81-%D8%A7%D9%84%D8%B4%D8%B9%D8%B1-%D8%A7%D9%84%D9%8A%D9%88%D9%85%D9%8A-%D8%A8%D8%A7%D9%83%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%AC%D8%A8%D9%84-%D9%88%D8%A7%D9%84%D9%86%D8%B9%D9%86%D8%A7%D8%B9-240%D9%85%D9%84/p959083217",
+          "currentTitle": "ميلي - كريم تصفيف الشعر اليومي باكليل الجبل والنعناع 240مل | zahraa-sa",
+          "targetKeyword": "كريم تصفيف الشعر اليومي باكليل الجبل والنعناع 240مل",
+          "suggestedTitle": "كريم تصفيف الشعر اليومي باكليل الجبل والنعناع 240مل | zahraa-sa.c",
+          "actions": [
+            "استخدم عنوانًا رئيسيًا واحدًا يصف المنتج بدقة ويطابق موضوع الصفحة.",
+            "تحقق من هذا المرشح في استعلامات مشرفي بحث غوغل قبل تثبيته كالكلمة الأساسية."
+          ],
+          "evidence": {
+            "descriptionPresent": true,
+            "wordCount": 566,
+            "h1Count": 2,
+            "hasProductSchema": true
+          }
+        },
+        {
+          "url": "https://zahraa-sa.com/%D9%85%D9%8A%D9%84%D9%8A-%D8%AC%D9%84-%D8%AA%D9%82%D9%88%D9%8A%D8%A9-%D8%A7%D8%B7%D8%B1%D8%A7%D9%81-%D8%A7%D9%84%D8%B4%D8%B9%D8%B1-%D8%A8%D8%A7%D9%83%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%AC%D8%A8%D9%84-%D9%88%D8%A7%D9%84%D9%86%D8%B9%D9%86%D8%A7%D8%B9-57-%D8%AC%D9%85/p8912605",
+          "currentTitle": "ميلي - جل تقوية اطراف الشعر باكليل الجبل والنعناع 57 جم | zahraa-sa",
+          "targetKeyword": "جل تقوية اطراف الشعر باكليل الجبل والنعناع 57 جم",
+          "suggestedTitle": "جل تقوية اطراف الشعر باكليل الجبل والنعناع 57 جم | zahraa-sa.com",
+          "actions": [
+            "استخدم عنوانًا رئيسيًا واحدًا يصف المنتج بدقة ويطابق موضوع الصفحة.",
+            "تحقق من هذا المرشح في استعلامات مشرفي بحث غوغل قبل تثبيته كالكلمة الأساسية."
+          ],
+          "evidence": {
+            "descriptionPresent": true,
+            "wordCount": 316,
+            "h1Count": 2,
+            "hasProductSchema": true
+          }
+        }
+      ],
+      "contentOpportunities": [
+        {
+          "type": "buying-guide",
+          "label": "دليل شراء",
+          "targetKeyword": "كريم تصفيف الشعر اليومي باكليل الجبل والنعناع 240مل",
+          "workingTitle": "دليل اختيار كريم تصفيف الشعر اليومي باكليل الجبل والنعناع 240مل: ما الذي يجب التحقق منه قبل الشراء؟",
+          "sourceUrl": "https://zahraa-sa.com/%D9%85%D9%8A%D9%84%D9%8A-%D9%83%D8%B1%D9%8A%D9%85-%D8%AA%D8%B5%D9%81%D9%8A%D9%81-%D8%A7%D9%84%D8%B4%D8%B9%D8%B1-%D8%A7%D9%84%D9%8A%D9%88%D9%85%D9%8A-%D8%A8%D8%A7%D9%83%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%AC%D8%A8%D9%84-%D9%88%D8%A7%D9%84%D9%86%D8%B9%D9%86%D8%A7%D8%B9-240%D9%85%D9%84/p959083217",
+          "reason": "يبني على موضوع موجود في الموقع ويجب تحريره بمعلومات أصلية وتجربة أو أدلة حقيقية."
+        },
+        {
+          "type": "comparison",
+          "label": "مقارنة",
+          "targetKeyword": "جل تقوية اطراف الشعر باكليل الجبل والنعناع 57 جم",
+          "workingTitle": "جل تقوية اطراف الشعر باكليل الجبل والنعناع 57 جم: مقارنة الخيارات حسب الاحتياج والاستخدام",
+          "sourceUrl": "https://zahraa-sa.com/%D9%85%D9%8A%D9%84%D9%8A-%D8%AC%D9%84-%D8%AA%D9%82%D9%88%D9%8A%D8%A9-%D8%A7%D8%B7%D8%B1%D8%A7%D9%81-%D8%A7%D9%84%D8%B4%D8%B9%D8%B1-%D8%A8%D8%A7%D9%83%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%AC%D8%A8%D9%84-%D9%88%D8%A7%D9%84%D9%86%D8%B9%D9%86%D8%A7%D8%B9-57-%D8%AC%D9%85/p8912605",
+          "reason": "يبني على موضوع موجود في الموقع ويجب تحريره بمعلومات أصلية وتجربة أو أدلة حقيقية."
+        },
+        {
+          "type": "how-to",
+          "label": "شرح عملي",
+          "targetKeyword": "منتجات مختارة لبشرة صحية ونضرة كل يوم",
+          "workingTitle": "كيفية اختيار منتجات مختارة لبشرة صحية ونضرة كل يوم واستخدامه بناءً على حقائق المنتج",
+          "sourceUrl": "https://zahraa-sa.com/%D8%B9%D9%86%D8%A7%D9%8A%D9%87-%D8%A8%D8%A7%D9%84%D8%A8%D8%B4%D8%B1%D8%A9/c1515641156",
+          "reason": "يبني على موضوع موجود في الموقع ويجب تحريره بمعلومات أصلية وتجربة أو أدلة حقيقية."
+        },
+        {
+          "type": "faq",
+          "label": "أسئلة شائعة",
+          "targetKeyword": "حلول متكاملة لشعر قوي ولامع وجذاب",
+          "workingTitle": "أسئلة شائعة عن حلول متكاملة لشعر قوي ولامع وجذاب: الاختيار والشحن والإرجاع",
+          "sourceUrl": "https://zahraa-sa.com/%D8%B9%D9%86%D8%A7%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%B4%D8%B9%D8%B1/c875821125",
+          "reason": "يبني على موضوع موجود في الموقع ويجب تحريره بمعلومات أصلية وتجربة أو أدلة حقيقية."
+        }
+      ],
+      "searchConsole": {
+        "status": "not_connected",
+        "property": "sc-domain:zahraa-sa.com",
+        "links": {
+          "console": "https://search.google.com/search-console?resource_id=sc-domain%3Azahraa-sa.com",
+          "setupGuide": "https://support.google.com/webmasters/answer/34592",
+          "performanceGuide": "https://support.google.com/webmasters/answer/7576553",
+          "urlInspectionGuide": "https://support.google.com/webmasters/answer/9012289",
+          "sitemapsGuide": "https://support.google.com/webmasters/answer/7451001"
+        },
+        "metrics": [
+          {
+            "key": "clicks",
+            "label": "النقرات",
+            "value": null,
+            "status": "not_connected"
+          },
+          {
+            "key": "impressions",
+            "label": "مرات الظهور",
+            "value": null,
+            "status": "not_connected"
+          },
+          {
+            "key": "ctr",
+            "label": "نسبة النقر",
+            "value": null,
+            "status": "not_connected"
+          },
+          {
+            "key": "position",
+            "label": "متوسط الموضع",
+            "value": null,
+            "status": "not_connected"
+          },
+          {
+            "key": "queries",
+            "label": "الاستعلامات",
+            "value": null,
+            "status": "not_connected"
+          },
+          {
+            "key": "pages",
+            "label": "الصفحات",
+            "value": null,
+            "status": "not_connected"
+          }
+        ]
+      }
+    },
+    "limitations": [
+      "هذه نتيجة جاهزية حتمية للموقع وليست قياسًا لترتيب أو ظهور فعلي في Google أو ChatGPT أو Gemini.",
+      "الأدلة الخارجية وبيانات Search Console، بما فيها تقرير أداء الذكاء الاصطناعي التوليدي، غير متاحة في الفحص المجاني ولم تُحسب كفشل.",
+      "حلل الفاحص HTML وXML فقط دون تشغيل JavaScript، وبحد أقصى 10 صفحات؛ تمت قراءة 10 صفحة.",
+      "لا يستطيع هذا الفحص وحده التحقق من أصالة المحتوى أو تجربة الصفحة أو Merchant Center أو Google Business Profile؛ تحتاج هذه العناصر إلى مصادر أو مراجعة إضافية.",
+      "تعذر التحقق من 2 رابطًا مرشحًا، وانعكس ذلك على التغطية والثقة."
+    ],
+    "scannedAt": "2026-07-16T19:39:13.123Z",
+    "pagesScanned": 10
+  },
+  "accessLevel": "full",
+  "expiresAt": "2026-08-15T19:39:13.200Z"
+}

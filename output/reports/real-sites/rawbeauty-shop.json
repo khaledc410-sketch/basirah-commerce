@@ -1,0 +1,444 @@
+{
+  "report": {
+    "domain": "rawbeauty.shop",
+    "score": 61,
+    "coverage": 7,
+    "confidence": 4,
+    "components": [
+      {
+        "key": "technical",
+        "label": "الجاهزية التقنية",
+        "weight": 25,
+        "score": 100,
+        "coverage": 7
+      },
+      {
+        "key": "content",
+        "label": "قيمة المحتوى واكتماله",
+        "weight": 30,
+        "score": 100,
+        "coverage": 7
+      },
+      {
+        "key": "entity",
+        "label": "وضوح العلامة والكيان",
+        "weight": 10,
+        "score": 0,
+        "coverage": 7
+      },
+      {
+        "key": "trust",
+        "label": "الثقة والسلطة",
+        "weight": 15,
+        "score": 0,
+        "coverage": 7
+      },
+      {
+        "key": "answerability",
+        "label": "الوضوح والفائدة للقارئ",
+        "weight": 10,
+        "score": 0,
+        "coverage": 7
+      },
+      {
+        "key": "structuredData",
+        "label": "البيانات المنظمة",
+        "weight": 5,
+        "score": 67,
+        "coverage": 7
+      },
+      {
+        "key": "externalEvidence",
+        "label": "الأدلة الخارجية",
+        "weight": 5,
+        "score": null,
+        "coverage": 0
+      }
+    ],
+    "findings": [
+      {
+        "id": "finding-trust-policy-coverage",
+        "component": "trust",
+        "title": "سياسات الثقة غير مكتملة",
+        "description": "لا تظهر سياسات الشحن والاسترجاع والخصوصية والشروط بما يكفي.",
+        "severity": "high",
+        "recommendation": "انشر السياسات الفعلية بوضوح واربطها من جميع الصفحات.",
+        "evidenceIds": [
+          "ev-trust-policy-coverage"
+        ]
+      },
+      {
+        "id": "finding-answerability-heading-structure",
+        "component": "answerability",
+        "title": "بنية العناوين غير واضحة",
+        "description": "بعض الصفحات لا تستخدم H1 واحدًا يوضح موضوع الصفحة.",
+        "severity": "medium",
+        "recommendation": "استخدم H1 واحدًا دقيقًا ثم نظّم الأقسام بعناوين H2 وH3 وصفية.",
+        "evidenceIds": [
+          "ev-answerability-heading-structure"
+        ]
+      },
+      {
+        "id": "finding-structuredData-product-schema",
+        "component": "structuredData",
+        "title": "بيانات المنتجات غير منظمة",
+        "description": "لم يظهر Product JSON-LD في الصفحات التي تمكن الفاحص من قراءتها.",
+        "severity": "medium",
+        "recommendation": "أضف Product وOffer بالقيم الحقيقية المتطابقة مع الصفحة والمخزون لدعم أهلية نتائج التسوق والغنية؛ ليسا شرطًا لميزات Google التوليدية.",
+        "evidenceIds": [
+          "ev-structuredData-product-schema"
+        ]
+      },
+      {
+        "id": "finding-trust-contact-details",
+        "component": "trust",
+        "title": "بيانات التواصل غير واضحة",
+        "description": "لا يستطيع الزائر أو محرك الإجابة استخراج وسيلة اتصال مباشرة.",
+        "severity": "medium",
+        "recommendation": "أضف بيانات تواصل صحيحة ومتسقة في صفحة التواصل والتذييل.",
+        "evidenceIds": [
+          "ev-trust-contact-details"
+        ]
+      },
+      {
+        "id": "finding-entity-identity-page",
+        "component": "entity",
+        "title": "سياق العلامة محدود",
+        "description": "لا تظهر صفحة تعريف أو تواصل واضحة في الروابط التي اكتشفناها.",
+        "severity": "low",
+        "recommendation": "أنشئ صفحة من نحن موثقة وصفحة تواصل واربطهما من التنقل الرئيسي أو التذييل.",
+        "evidenceIds": [
+          "ev-entity-identity-page"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev-technical-crawlable-pages",
+        "component": "technical",
+        "checkKey": "crawlable-pages",
+        "status": "pass",
+        "message": "تمكنت بصيرة من قراءة 2 صفحة HTML عامة.",
+        "urls": []
+      },
+      {
+        "id": "ev-technical-googlebot-root-access",
+        "component": "technical",
+        "checkKey": "googlebot-root-access",
+        "status": "pass",
+        "message": "يسمح robots.txt لـ Googlebot بقراءة الصفحة الرئيسية.",
+        "urls": [
+          "https://rawbeauty.shop/"
+        ]
+      },
+      {
+        "id": "ev-technical-oai-searchbot-root-access",
+        "component": "technical",
+        "checkKey": "oai-searchbot-root-access",
+        "status": "pass",
+        "message": "يسمح robots.txt لـ OAI-SearchBot بقراءة الصفحة الرئيسية.",
+        "urls": [
+          "https://rawbeauty.shop/"
+        ]
+      },
+      {
+        "id": "ev-externalEvidence-gptbot-training-control",
+        "component": "externalEvidence",
+        "checkKey": "gptbot-training-control",
+        "status": "unknown",
+        "message": "GPTBot مسموح على الصفحة الرئيسية؛ هذا إعداد تدريب محتمل ولا يقيس ظهور بحث ChatGPT.",
+        "urls": [
+          "https://rawbeauty.shop/"
+        ]
+      },
+      {
+        "id": "ev-externalEvidence-google-extended-training-control",
+        "component": "externalEvidence",
+        "checkKey": "google-extended-training-control",
+        "status": "unknown",
+        "message": "Google-Extended مسموح على الصفحة الرئيسية؛ هذا تحكم في استخدامات Gemini وليس شرطًا لميزات Google Search.",
+        "urls": [
+          "https://rawbeauty.shop/"
+        ]
+      },
+      {
+        "id": "ev-technical-root-indexability",
+        "component": "technical",
+        "checkKey": "root-indexability",
+        "status": "pass",
+        "message": "لم تعلن الصفحة الرئيسية توجيه noindex.",
+        "urls": []
+      },
+      {
+        "id": "ev-technical-sitemap",
+        "component": "technical",
+        "checkKey": "sitemap",
+        "status": "pass",
+        "message": "عُثر على خريطة موقع تضم 90 رابطًا.",
+        "urls": []
+      },
+      {
+        "id": "ev-technical-canonical-coverage",
+        "component": "technical",
+        "checkKey": "canonical-coverage",
+        "status": "pass",
+        "message": "100٪ من الصفحات المفحوصة تعلن canonical.",
+        "urls": []
+      },
+      {
+        "id": "ev-content-metadata-coverage",
+        "component": "content",
+        "checkKey": "metadata-coverage",
+        "status": "pass",
+        "message": "100٪ من الصفحات لديها عنوان ووصف تعريفيان.",
+        "urls": []
+      },
+      {
+        "id": "ev-content-language-coverage",
+        "component": "content",
+        "checkKey": "language-coverage",
+        "status": "pass",
+        "message": "100٪ من الصفحات تحتوي محتوى عربيًا جوهريًا.",
+        "urls": []
+      },
+      {
+        "id": "ev-content-content-depth",
+        "component": "content",
+        "checkKey": "content-depth",
+        "status": "unknown",
+        "message": "سُجل حجم النص المرئي كدليل سياقي فقط؛ لا يوجد طول مثالي ثابت للصفحة، ولا يمكن للفاحص الحتمي وحده الحكم على أصالة المحتوى أو فائدته.",
+        "urls": [
+          "https://rawbeauty.shop/",
+          "https://rawbeauty.shop/%D8%B9%D8%B1%D9%88%D8%B6/c100426312"
+        ]
+      },
+      {
+        "id": "ev-structuredData-organization-schema",
+        "component": "structuredData",
+        "checkKey": "organization-schema",
+        "status": "pass",
+        "message": "عُثر على كيان Organization أو LocalBusiness منظم.",
+        "urls": []
+      },
+      {
+        "id": "ev-entity-identity-page",
+        "component": "entity",
+        "checkKey": "identity-page",
+        "status": "fail",
+        "message": "لم يظهر رابط واضح لصفحة من نحن أو التواصل.",
+        "urls": []
+      },
+      {
+        "id": "ev-trust-policy-coverage",
+        "component": "trust",
+        "checkKey": "policy-coverage",
+        "status": "fail",
+        "message": "عُثر على 1 من أنواع صفحات السياسات الأساسية.",
+        "urls": []
+      },
+      {
+        "id": "ev-trust-contact-details",
+        "component": "trust",
+        "checkKey": "contact-details",
+        "status": "fail",
+        "message": "لم نعثر على بريد أو هاتف واضح في الصفحات المفحوصة.",
+        "urls": []
+      },
+      {
+        "id": "ev-answerability-heading-structure",
+        "component": "answerability",
+        "checkKey": "heading-structure",
+        "status": "fail",
+        "message": "50٪ من الصفحات تستخدم عنوان H1 واحدًا.",
+        "urls": [
+          "https://rawbeauty.shop/"
+        ]
+      },
+      {
+        "id": "ev-answerability-question-content",
+        "component": "answerability",
+        "checkKey": "question-content",
+        "status": "unknown",
+        "message": "لم نعثر على أسئلة أو FAQ؛ لا يُعد غيابها فشلًا لأن Google لا يشترط صيغة سؤال وجواب للبحث التوليدي.",
+        "urls": []
+      },
+      {
+        "id": "ev-structuredData-jsonld-validity",
+        "component": "structuredData",
+        "checkKey": "jsonld-validity",
+        "status": "pass",
+        "message": "100٪ من الصفحات تحتوي JSON-LD صالحًا.",
+        "urls": []
+      },
+      {
+        "id": "ev-structuredData-product-schema",
+        "component": "structuredData",
+        "checkKey": "product-schema",
+        "status": "fail",
+        "message": "لم نعثر على Product schema ضمن العينة.",
+        "urls": []
+      },
+      {
+        "id": "ev-externalEvidence-external-mentions",
+        "component": "externalEvidence",
+        "checkKey": "external-mentions",
+        "status": "unknown",
+        "message": "لا يقيس فحص الموقع وحده الإشارات أو الاستشهادات الخارجية.",
+        "urls": []
+      },
+      {
+        "id": "ev-technical-page-fetch-coverage",
+        "component": "technical",
+        "checkKey": "page-fetch-coverage",
+        "status": "unknown",
+        "message": "تعذر التحقق من 28 رابطًا مرشحًا، لذلك خُفضت التغطية دون احتسابها كفشل.",
+        "urls": [
+          "https://rawbeauty.shop/%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA-%D8%AE%D8%A7%D8%B5%D9%87/c842037913"
+        ]
+      }
+    ],
+    "organicGrowthPlan": {
+      "source": "deterministic-public-pages",
+      "keywordMethod": "مرشحات موضوعية من عناوين الصفحات والعنوان الرئيسي في العينة؛ لا تتضمن حجم البحث أو صعوبة الكلمة قبل ربط مشرفي بحث غوغل أو مصدر كلمات موثوق.",
+      "pageSnapshots": [
+        {
+          "url": "https://rawbeauty.shop/",
+          "kind": "home",
+          "title": "Raw Beauty تسوقي الآن أحدث مستحضرات المكياج ومنتجات العناية بالبشرة",
+          "descriptionPresent": true,
+          "wordCount": 173,
+          "h1Count": 9,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Organization"
+          ]
+        },
+        {
+          "url": "https://rawbeauty.shop/%D8%B9%D8%B1%D9%88%D8%B6/c100426312",
+          "kind": "category",
+          "title": "عروض الجمعة وفر أكثر الآن اكتشف أضخم عروض السنة لتجربة تسوق لا تنسى | Raw Beauty",
+          "descriptionPresent": true,
+          "wordCount": 90,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Organization"
+          ]
+        }
+      ],
+      "keywordOpportunities": [
+        {
+          "keyword": "عروض الجمعة وفر أكثر الآن اكتشف أضخم عروض السنة لتجربة تسوق لا تنسى",
+          "intent": "commercial",
+          "targetUrl": "https://rawbeauty.shop/%D8%B9%D8%B1%D9%88%D8%B6/c100426312",
+          "source": "title",
+          "confidence": "high",
+          "rationale": "مرشح مستخرج من العنوان أو H1 الحالي في صفحة فئة؛ يجب التحقق من الطلب والانطباعات داخل أدوات مشرفي بحث غوغل قبل اعتماده."
+        },
+        {
+          "keyword": "تسوقي الآن أحدث مستحضرات المكياج ومنتجات العناية بالبشرة",
+          "intent": "navigational",
+          "targetUrl": "https://rawbeauty.shop/",
+          "source": "title",
+          "confidence": "high",
+          "rationale": "مرشح مستخرج من العنوان أو H1 الحالي في صفحة الموقع؛ يجب التحقق من الطلب والانطباعات داخل أدوات مشرفي بحث غوغل قبل اعتماده."
+        }
+      ],
+      "productEnhancements": [],
+      "contentOpportunities": [
+        {
+          "type": "buying-guide",
+          "label": "دليل شراء",
+          "targetKeyword": "عروض الجمعة وفر أكثر الآن اكتشف أضخم عروض السنة لتجربة تسوق لا تنسى",
+          "workingTitle": "دليل اختيار عروض الجمعة وفر أكثر الآن اكتشف أضخم عروض السنة لتجربة تسوق لا تنسى: ما الذي يجب التحقق منه قبل الشراء؟",
+          "sourceUrl": "https://rawbeauty.shop/%D8%B9%D8%B1%D9%88%D8%B6/c100426312",
+          "reason": "يبني على موضوع موجود في الموقع ويجب تحريره بمعلومات أصلية وتجربة أو أدلة حقيقية."
+        },
+        {
+          "type": "comparison",
+          "label": "مقارنة",
+          "targetKeyword": "تسوقي الآن أحدث مستحضرات المكياج ومنتجات العناية بالبشرة",
+          "workingTitle": "تسوقي الآن أحدث مستحضرات المكياج ومنتجات العناية بالبشرة: مقارنة الخيارات حسب الاحتياج والاستخدام",
+          "sourceUrl": "https://rawbeauty.shop/",
+          "reason": "يبني على موضوع موجود في الموقع ويجب تحريره بمعلومات أصلية وتجربة أو أدلة حقيقية."
+        },
+        {
+          "type": "how-to",
+          "label": "شرح عملي",
+          "targetKeyword": "عروض الجمعة وفر أكثر الآن اكتشف أضخم عروض السنة لتجربة تسوق لا تنسى",
+          "workingTitle": "كيفية اختيار عروض الجمعة وفر أكثر الآن اكتشف أضخم عروض السنة لتجربة تسوق لا تنسى واستخدامه بناءً على حقائق المنتج",
+          "sourceUrl": "https://rawbeauty.shop/%D8%B9%D8%B1%D9%88%D8%B6/c100426312",
+          "reason": "يبني على موضوع موجود في الموقع ويجب تحريره بمعلومات أصلية وتجربة أو أدلة حقيقية."
+        },
+        {
+          "type": "faq",
+          "label": "أسئلة شائعة",
+          "targetKeyword": "تسوقي الآن أحدث مستحضرات المكياج ومنتجات العناية بالبشرة",
+          "workingTitle": "أسئلة شائعة عن تسوقي الآن أحدث مستحضرات المكياج ومنتجات العناية بالبشرة: الاختيار والشحن والإرجاع",
+          "sourceUrl": "https://rawbeauty.shop/",
+          "reason": "يبني على موضوع موجود في الموقع ويجب تحريره بمعلومات أصلية وتجربة أو أدلة حقيقية."
+        }
+      ],
+      "searchConsole": {
+        "status": "not_connected",
+        "property": "sc-domain:rawbeauty.shop",
+        "links": {
+          "console": "https://search.google.com/search-console?resource_id=sc-domain%3Arawbeauty.shop",
+          "setupGuide": "https://support.google.com/webmasters/answer/34592",
+          "performanceGuide": "https://support.google.com/webmasters/answer/7576553",
+          "urlInspectionGuide": "https://support.google.com/webmasters/answer/9012289",
+          "sitemapsGuide": "https://support.google.com/webmasters/answer/7451001"
+        },
+        "metrics": [
+          {
+            "key": "clicks",
+            "label": "النقرات",
+            "value": null,
+            "status": "not_connected"
+          },
+          {
+            "key": "impressions",
+            "label": "مرات الظهور",
+            "value": null,
+            "status": "not_connected"
+          },
+          {
+            "key": "ctr",
+            "label": "نسبة النقر",
+            "value": null,
+            "status": "not_connected"
+          },
+          {
+            "key": "position",
+            "label": "متوسط الموضع",
+            "value": null,
+            "status": "not_connected"
+          },
+          {
+            "key": "queries",
+            "label": "الاستعلامات",
+            "value": null,
+            "status": "not_connected"
+          },
+          {
+            "key": "pages",
+            "label": "الصفحات",
+            "value": null,
+            "status": "not_connected"
+          }
+        ]
+      }
+    },
+    "limitations": [
+      "هذه نتيجة جاهزية حتمية للموقع وليست قياسًا لترتيب أو ظهور فعلي في Google أو ChatGPT أو Gemini.",
+      "الأدلة الخارجية وبيانات Search Console، بما فيها تقرير أداء الذكاء الاصطناعي التوليدي، غير متاحة في الفحص المجاني ولم تُحسب كفشل.",
+      "حلل الفاحص HTML وXML فقط دون تشغيل JavaScript، وبحد أقصى 10 صفحات؛ تمت قراءة 2 صفحة.",
+      "لا يستطيع هذا الفحص وحده التحقق من أصالة المحتوى أو تجربة الصفحة أو Merchant Center أو Google Business Profile؛ تحتاج هذه العناصر إلى مصادر أو مراجعة إضافية.",
+      "تعذر التحقق من 28 رابطًا مرشحًا، وانعكس ذلك على التغطية والثقة."
+    ],
+    "scannedAt": "2026-07-16T19:44:37.878Z",
+    "pagesScanned": 2
+  },
+  "accessLevel": "full",
+  "expiresAt": "2026-08-15T19:44:38.354Z"
+}

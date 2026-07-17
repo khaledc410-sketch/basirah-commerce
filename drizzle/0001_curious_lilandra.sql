@@ -1,0 +1,1 @@
+ALTER TABLE "platform_connections" ADD COLUMN "authorization_token_encrypted" text;

@@ -1,0 +1,277 @@
+[
+  {
+    "site": "zahraa-sa.com",
+    "domain": "zahraa-sa.com",
+    "token": "J4GGbMlED4un5kkG3S7-Hd9ZjA88odUi",
+    "reportToken": "4P-aQNah92NhgCy4FG5biubYkQW31pqvIujLjAiO5eQ",
+    "reportUrl": "http://localhost:3000/ar/report/4P-aQNah92NhgCy4FG5biubYkQW31pqvIujLjAiO5eQ",
+    "score": 82,
+    "coverage": 79,
+    "confidence": 79,
+    "pagesScanned": 10,
+    "findings": 2,
+    "pageKinds": {
+      "home": 1,
+      "product": 2,
+      "category": 3,
+      "article": 0,
+      "policy": 3,
+      "other": 1
+    },
+    "keywords": 6,
+    "keywordExamples": [
+      {
+        "keyword": "كريم تصفيف الشعر اليومي باكليل الجبل والنعناع 240مل",
+        "intent": "transactional",
+        "targetUrl": "https://zahraa-sa.com/%D9%85%D9%8A%D9%84%D9%8A-%D9%83%D8%B1%D9%8A%D9%85-%D8%AA%D8%B5%D9%81%D9%8A%D9%81-%D8%A7%D9%84%D8%B4%D8%B9%D8%B1-%D8%A7%D9%84%D9%8A%D9%88%D9%85%D9%8A-%D8%A8%D8%A7%D9%83%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%AC%D8%A8%D9%84-%D9%88%D8%A7%D9%84%D9%86%D8%B9%D9%86%D8%A7%D8%B9-240%D9%85%D9%84/p959083217"
+      },
+      {
+        "keyword": "جل تقوية اطراف الشعر باكليل الجبل والنعناع 57 جم",
+        "intent": "transactional",
+        "targetUrl": "https://zahraa-sa.com/%D9%85%D9%8A%D9%84%D9%8A-%D8%AC%D9%84-%D8%AA%D9%82%D9%88%D9%8A%D8%A9-%D8%A7%D8%B7%D8%B1%D8%A7%D9%81-%D8%A7%D9%84%D8%B4%D8%B9%D8%B1-%D8%A8%D8%A7%D9%83%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%AC%D8%A8%D9%84-%D9%88%D8%A7%D9%84%D9%86%D8%B9%D9%86%D8%A7%D8%B9-57-%D8%AC%D9%85/p8912605"
+      },
+      {
+        "keyword": "منتجات مختارة لبشرة صحية ونضرة كل يوم",
+        "intent": "commercial",
+        "targetUrl": "https://zahraa-sa.com/%D8%B9%D9%86%D8%A7%D9%8A%D9%87-%D8%A8%D8%A7%D9%84%D8%A8%D8%B4%D8%B1%D8%A9/c1515641156"
+      }
+    ],
+    "products": 2,
+    "contentTypes": [
+      "buying-guide",
+      "comparison",
+      "how-to",
+      "faq"
+    ],
+    "searchConsole": {
+      "status": "not_connected",
+      "property": "sc-domain:zahraa-sa.com",
+      "metricsAreUnconnected": true
+    },
+    "accessLevel": "full",
+    "pdf": {
+      "httpStatus": 200,
+      "bytes": 42361,
+      "magic": "%PDF-"
+    }
+  },
+  {
+    "site": "perfumesdreams.com",
+    "domain": "perfumesdreams.com",
+    "token": "__Q9Vnmv_Bnkju5eXaW7YlQiLFEzEb-4",
+    "reportToken": "j68Y0u_ng3uy59to-alqU36CL9f2kJjZszcwW_RIhYo",
+    "reportUrl": "http://localhost:3000/ar/report/j68Y0u_ng3uy59to-alqU36CL9f2kJjZszcwW_RIhYo",
+    "score": 85,
+    "coverage": 41,
+    "confidence": 41,
+    "pagesScanned": 10,
+    "findings": 2,
+    "pageKinds": {
+      "home": 1,
+      "product": 8,
+      "category": 0,
+      "article": 0,
+      "policy": 0,
+      "other": 1
+    },
+    "keywords": 8,
+    "keywordExamples": [
+      {
+        "keyword": "عطر جورجيو أرماني إمبريو أرماني سترونجر وذ يو للرجال",
+        "intent": "transactional",
+        "targetUrl": "https://perfumesdreams.com/ar/-/p1620125623"
+      },
+      {
+        "keyword": "عطر شانيل كوكو مادموزيل لو بريفيه او بور لو نايت للنساء",
+        "intent": "transactional",
+        "targetUrl": "https://perfumesdreams.com/ar/-/p334003902"
+      },
+      {
+        "keyword": "عطر ديور هيبنوتيك بويزن للنساء",
+        "intent": "transactional",
+        "targetUrl": "https://perfumesdreams.com/ar/-/p1180414636"
+      }
+    ],
+    "products": 5,
+    "contentTypes": [
+      "buying-guide",
+      "comparison",
+      "how-to",
+      "faq"
+    ],
+    "searchConsole": {
+      "status": "not_connected",
+      "property": "sc-domain:perfumesdreams.com",
+      "metricsAreUnconnected": true
+    },
+    "accessLevel": "full",
+    "pdf": {
+      "httpStatus": 200,
+      "bytes": 41163,
+      "magic": "%PDF-"
+    }
+  },
+  {
+    "site": "freesiabloom.com",
+    "domain": "freesiabloom.com",
+    "token": "mb5BHecTNHZQdG-xtrIDrq7mL-7YmyYJ",
+    "reportToken": "WX-eIXdzf8ewsnBU8wfu1boNzTctOKzM3b2RC_Fx9Fo",
+    "reportUrl": "http://localhost:3000/ar/report/WX-eIXdzf8ewsnBU8wfu1boNzTctOKzM3b2RC_Fx9Fo",
+    "score": 80,
+    "coverage": 95,
+    "confidence": 95,
+    "pagesScanned": 10,
+    "findings": 3,
+    "pageKinds": {
+      "home": 1,
+      "product": 0,
+      "category": 5,
+      "article": 0,
+      "policy": 2,
+      "other": 2
+    },
+    "keywords": 7,
+    "keywordExamples": [
+      {
+        "keyword": "كل المنتجات",
+        "intent": "commercial",
+        "targetUrl": "https://freesiabloom.com/ar/%D9%83%D9%84-%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA/c718855972"
+      },
+      {
+        "keyword": "منتجات مميزه بالحبة",
+        "intent": "commercial",
+        "targetUrl": "https://freesiabloom.com/ar/%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA-%D9%85%D9%85%D9%8A%D8%B2%D9%87-%D8%A8%D8%A7%D9%84%D8%AD%D8%A8%D8%A9/c2145583764"
+      },
+      {
+        "keyword": "هدايا التأسيس",
+        "intent": "commercial",
+        "targetUrl": "https://freesiabloom.com/ar/%D9%87%D8%AF%D8%A7%D9%8A%D8%A7-%D8%A7%D9%84%D8%AA%D8%A3%D8%B3%D9%8A%D8%B3/c691294018"
+      }
+    ],
+    "products": 0,
+    "contentTypes": [
+      "buying-guide",
+      "comparison",
+      "how-to",
+      "faq"
+    ],
+    "searchConsole": {
+      "status": "not_connected",
+      "property": "sc-domain:freesiabloom.com",
+      "metricsAreUnconnected": true
+    },
+    "accessLevel": "full",
+    "pdf": {
+      "httpStatus": 200,
+      "bytes": 41814,
+      "magic": "%PDF-"
+    }
+  },
+  {
+    "site": "casa.com.sa/ar",
+    "domain": "casa.com.sa",
+    "token": "fFUnahd_meqFtnzcRxgGfazflksUJSlk",
+    "reportToken": "Qc03pP5jOIje6HpsWmyHODc1wilMiR2QhMKJyny06nE",
+    "reportUrl": "http://localhost:3000/ar/report/Qc03pP5jOIje6HpsWmyHODc1wilMiR2QhMKJyny06nE",
+    "score": 82,
+    "coverage": 95,
+    "confidence": 95,
+    "pagesScanned": 10,
+    "findings": 2,
+    "pageKinds": {
+      "home": 1,
+      "product": 4,
+      "category": 3,
+      "article": 0,
+      "policy": 0,
+      "other": 2
+    },
+    "keywords": 5,
+    "keywordExamples": [
+      {
+        "keyword": "شامبو بلاتينيوم سلفر لإزالة اصفرار الشعر الأشقر من كازا",
+        "intent": "transactional",
+        "targetUrl": "https://casa.com.sa/ar/p577803892/p577803892"
+      },
+      {
+        "keyword": "بلسم كازا بزيت الأرجان الطبيعي للشعر الجاف والتالف",
+        "intent": "transactional",
+        "targetUrl": "https://casa.com.sa/ar/p1477166950/p1477166950"
+      },
+      {
+        "keyword": "مجموعات 99",
+        "intent": "commercial",
+        "targetUrl": "https://casa.com.sa/ar/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A7%D8%AA-99/c837266632"
+      }
+    ],
+    "products": 4,
+    "contentTypes": [
+      "buying-guide",
+      "comparison",
+      "how-to",
+      "faq"
+    ],
+    "searchConsole": {
+      "status": "not_connected",
+      "property": "sc-domain:casa.com.sa",
+      "metricsAreUnconnected": true
+    },
+    "accessLevel": "full",
+    "pdf": {
+      "httpStatus": 200,
+      "bytes": 41253,
+      "magic": "%PDF-"
+    }
+  },
+  {
+    "site": "rawbeauty.shop",
+    "domain": "rawbeauty.shop",
+    "token": "qtKzTUVKRzNW72X-XMa1zG69bP9R5z0P",
+    "reportToken": "2IeAQ3MPKN3FhcvM8TWmcLHJM14rgkE7W-qHw-XBCWk",
+    "reportUrl": "http://localhost:3000/ar/report/2IeAQ3MPKN3FhcvM8TWmcLHJM14rgkE7W-qHw-XBCWk",
+    "score": 61,
+    "coverage": 7,
+    "confidence": 4,
+    "pagesScanned": 2,
+    "findings": 5,
+    "pageKinds": {
+      "home": 1,
+      "product": 0,
+      "category": 1,
+      "article": 0,
+      "policy": 0,
+      "other": 0
+    },
+    "keywords": 2,
+    "keywordExamples": [
+      {
+        "keyword": "عروض الجمعة وفر أكثر الآن اكتشف أضخم عروض السنة لتجربة تسوق لا تنسى",
+        "intent": "commercial",
+        "targetUrl": "https://rawbeauty.shop/%D8%B9%D8%B1%D9%88%D8%B6/c100426312"
+      },
+      {
+        "keyword": "تسوقي الآن أحدث مستحضرات المكياج ومنتجات العناية بالبشرة",
+        "intent": "navigational",
+        "targetUrl": "https://rawbeauty.shop/"
+      }
+    ],
+    "products": 0,
+    "contentTypes": [
+      "buying-guide",
+      "comparison",
+      "how-to",
+      "faq"
+    ],
+    "searchConsole": {
+      "status": "not_connected",
+      "property": "sc-domain:rawbeauty.shop",
+      "metricsAreUnconnected": true
+    },
+    "accessLevel": "full",
+    "pdf": {
+      "httpStatus": 200,
+      "bytes": 42345,
+      "magic": "%PDF-"
+    }
+  }
+]

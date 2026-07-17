@@ -1,0 +1,680 @@
+{
+  "report": {
+    "domain": "perfumesdreams.com",
+    "score": 85,
+    "coverage": 41,
+    "confidence": 41,
+    "components": [
+      {
+        "key": "technical",
+        "label": "الجاهزية التقنية",
+        "weight": 25,
+        "score": 83,
+        "coverage": 43
+      },
+      {
+        "key": "content",
+        "label": "قيمة المحتوى واكتماله",
+        "weight": 30,
+        "score": 100,
+        "coverage": 43
+      },
+      {
+        "key": "entity",
+        "label": "وضوح العلامة والكيان",
+        "weight": 10,
+        "score": 0,
+        "coverage": 43
+      },
+      {
+        "key": "trust",
+        "label": "الثقة والسلطة",
+        "weight": 15,
+        "score": 100,
+        "coverage": 43
+      },
+      {
+        "key": "answerability",
+        "label": "الوضوح والفائدة للقارئ",
+        "weight": 10,
+        "score": 100,
+        "coverage": 43
+      },
+      {
+        "key": "structuredData",
+        "label": "البيانات المنظمة",
+        "weight": 5,
+        "score": 100,
+        "coverage": 43
+      },
+      {
+        "key": "externalEvidence",
+        "label": "الأدلة الخارجية",
+        "weight": 5,
+        "score": null,
+        "coverage": 0
+      }
+    ],
+    "findings": [
+      {
+        "id": "finding-technical-sitemap",
+        "component": "technical",
+        "title": "خريطة الموقع غير متاحة",
+        "description": "لم يتمكن الفاحص من اكتشاف sitemap صالحة ضمن النطاق.",
+        "severity": "medium",
+        "recommendation": "أنشئ sitemap.xml، أدرج الصفحات الأساسية فيها، واربطها من robots.txt.",
+        "evidenceIds": [
+          "ev-technical-sitemap"
+        ]
+      },
+      {
+        "id": "finding-entity-identity-page",
+        "component": "entity",
+        "title": "سياق العلامة محدود",
+        "description": "لا تظهر صفحة تعريف أو تواصل واضحة في الروابط التي اكتشفناها.",
+        "severity": "low",
+        "recommendation": "أنشئ صفحة من نحن موثقة وصفحة تواصل واربطهما من التنقل الرئيسي أو التذييل.",
+        "evidenceIds": [
+          "ev-entity-identity-page"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev-technical-crawlable-pages",
+        "component": "technical",
+        "checkKey": "crawlable-pages",
+        "status": "pass",
+        "message": "تمكنت بصيرة من قراءة 10 صفحة HTML عامة.",
+        "urls": []
+      },
+      {
+        "id": "ev-technical-googlebot-root-access",
+        "component": "technical",
+        "checkKey": "googlebot-root-access",
+        "status": "pass",
+        "message": "يسمح robots.txt لـ Googlebot بقراءة الصفحة الرئيسية.",
+        "urls": [
+          "https://perfumesdreams.com/"
+        ]
+      },
+      {
+        "id": "ev-technical-oai-searchbot-root-access",
+        "component": "technical",
+        "checkKey": "oai-searchbot-root-access",
+        "status": "pass",
+        "message": "يسمح robots.txt لـ OAI-SearchBot بقراءة الصفحة الرئيسية.",
+        "urls": [
+          "https://perfumesdreams.com/"
+        ]
+      },
+      {
+        "id": "ev-externalEvidence-gptbot-training-control",
+        "component": "externalEvidence",
+        "checkKey": "gptbot-training-control",
+        "status": "unknown",
+        "message": "GPTBot مسموح على الصفحة الرئيسية؛ هذا إعداد تدريب محتمل ولا يقيس ظهور بحث ChatGPT.",
+        "urls": [
+          "https://perfumesdreams.com/"
+        ]
+      },
+      {
+        "id": "ev-externalEvidence-google-extended-training-control",
+        "component": "externalEvidence",
+        "checkKey": "google-extended-training-control",
+        "status": "unknown",
+        "message": "Google-Extended مسموح على الصفحة الرئيسية؛ هذا تحكم في استخدامات Gemini وليس شرطًا لميزات Google Search.",
+        "urls": [
+          "https://perfumesdreams.com/"
+        ]
+      },
+      {
+        "id": "ev-technical-root-indexability",
+        "component": "technical",
+        "checkKey": "root-indexability",
+        "status": "pass",
+        "message": "لم تعلن الصفحة الرئيسية توجيه noindex.",
+        "urls": []
+      },
+      {
+        "id": "ev-technical-sitemap",
+        "component": "technical",
+        "checkKey": "sitemap",
+        "status": "fail",
+        "message": "لم نعثر على خريطة موقع XML قابلة للقراءة.",
+        "urls": []
+      },
+      {
+        "id": "ev-technical-canonical-coverage",
+        "component": "technical",
+        "checkKey": "canonical-coverage",
+        "status": "pass",
+        "message": "100٪ من الصفحات المفحوصة تعلن canonical.",
+        "urls": []
+      },
+      {
+        "id": "ev-content-metadata-coverage",
+        "component": "content",
+        "checkKey": "metadata-coverage",
+        "status": "pass",
+        "message": "100٪ من الصفحات لديها عنوان ووصف تعريفيان.",
+        "urls": []
+      },
+      {
+        "id": "ev-content-language-coverage",
+        "component": "content",
+        "checkKey": "language-coverage",
+        "status": "pass",
+        "message": "100٪ من الصفحات تحتوي محتوى عربيًا جوهريًا.",
+        "urls": []
+      },
+      {
+        "id": "ev-content-content-depth",
+        "component": "content",
+        "checkKey": "content-depth",
+        "status": "unknown",
+        "message": "سُجل حجم النص المرئي كدليل سياقي فقط؛ لا يوجد طول مثالي ثابت للصفحة، ولا يمكن للفاحص الحتمي وحده الحكم على أصالة المحتوى أو فائدته.",
+        "urls": [
+          "https://perfumesdreams.com/",
+          "https://perfumesdreams.com/ar",
+          "https://perfumesdreams.com/ar/-/p1620125623",
+          "https://perfumesdreams.com/ar/-/p334003902",
+          "https://perfumesdreams.com/ar/-/p1180414636",
+          "https://perfumesdreams.com/ar/-/p1826995240",
+          "https://perfumesdreams.com/ar/-/p269304020",
+          "https://perfumesdreams.com/ar/-/p1647410142",
+          "https://perfumesdreams.com/ar/-/p1233133926",
+          "https://perfumesdreams.com/ar/-/p300923121"
+        ]
+      },
+      {
+        "id": "ev-structuredData-organization-schema",
+        "component": "structuredData",
+        "checkKey": "organization-schema",
+        "status": "pass",
+        "message": "عُثر على كيان Organization أو LocalBusiness منظم.",
+        "urls": []
+      },
+      {
+        "id": "ev-entity-identity-page",
+        "component": "entity",
+        "checkKey": "identity-page",
+        "status": "fail",
+        "message": "لم يظهر رابط واضح لصفحة من نحن أو التواصل.",
+        "urls": []
+      },
+      {
+        "id": "ev-trust-policy-coverage",
+        "component": "trust",
+        "checkKey": "policy-coverage",
+        "status": "pass",
+        "message": "عُثر على 3 من أنواع صفحات السياسات الأساسية.",
+        "urls": []
+      },
+      {
+        "id": "ev-trust-contact-details",
+        "component": "trust",
+        "checkKey": "contact-details",
+        "status": "pass",
+        "message": "عُثر على وسيلة اتصال قابلة للاستخراج.",
+        "urls": []
+      },
+      {
+        "id": "ev-answerability-heading-structure",
+        "component": "answerability",
+        "checkKey": "heading-structure",
+        "status": "pass",
+        "message": "100٪ من الصفحات تستخدم عنوان H1 واحدًا.",
+        "urls": []
+      },
+      {
+        "id": "ev-answerability-question-content",
+        "component": "answerability",
+        "checkKey": "question-content",
+        "status": "unknown",
+        "message": "لم نعثر على أسئلة أو FAQ؛ لا يُعد غيابها فشلًا لأن Google لا يشترط صيغة سؤال وجواب للبحث التوليدي.",
+        "urls": []
+      },
+      {
+        "id": "ev-structuredData-jsonld-validity",
+        "component": "structuredData",
+        "checkKey": "jsonld-validity",
+        "status": "pass",
+        "message": "100٪ من الصفحات تحتوي JSON-LD صالحًا.",
+        "urls": []
+      },
+      {
+        "id": "ev-structuredData-product-schema",
+        "component": "structuredData",
+        "checkKey": "product-schema",
+        "status": "pass",
+        "message": "عُثر على Product schema ضمن العينة.",
+        "urls": []
+      },
+      {
+        "id": "ev-externalEvidence-external-mentions",
+        "component": "externalEvidence",
+        "checkKey": "external-mentions",
+        "status": "unknown",
+        "message": "لا يقيس فحص الموقع وحده الإشارات أو الاستشهادات الخارجية.",
+        "urls": []
+      },
+      {
+        "id": "ev-technical-page-fetch-coverage",
+        "component": "technical",
+        "checkKey": "page-fetch-coverage",
+        "status": "unknown",
+        "message": "تعذر التحقق من 13 رابطًا مرشحًا، لذلك خُفضت التغطية دون احتسابها كفشل.",
+        "urls": [
+          "https://perfumesdreams.com/cdn-cgi/l/email-protection",
+          "https://perfumesdreams.com/ar/-/c2065670537",
+          "https://perfumesdreams.com/ar/-/c236287268",
+          "https://perfumesdreams.com/ar/-/c484505807",
+          "https://perfumesdreams.com/ar/-/c500437",
+          "https://perfumesdreams.com/ar/-/c134410592",
+          "https://perfumesdreams.com/ar/-/c197965908",
+          "https://perfumesdreams.com/ar/-/c2075024834",
+          "https://perfumesdreams.com/ar/-/c246917135",
+          "https://perfumesdreams.com/ar/-/c1486665480",
+          "https://perfumesdreams.com/ar/-/c712627721",
+          "https://perfumesdreams.com/ar/-/c1768710502"
+        ]
+      }
+    ],
+    "organicGrowthPlan": {
+      "source": "deterministic-public-pages",
+      "keywordMethod": "مرشحات موضوعية من عناوين الصفحات والعنوان الرئيسي في العينة؛ لا تتضمن حجم البحث أو صعوبة الكلمة قبل ربط مشرفي بحث غوغل أو مصدر كلمات موثوق.",
+      "pageSnapshots": [
+        {
+          "url": "https://perfumesdreams.com/",
+          "kind": "home",
+          "title": "PERFUMESDREAMS",
+          "descriptionPresent": true,
+          "wordCount": 448,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Organization"
+          ]
+        },
+        {
+          "url": "https://perfumesdreams.com/ar",
+          "kind": "other",
+          "title": "PERFUMESDREAMS",
+          "descriptionPresent": true,
+          "wordCount": 448,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Organization"
+          ]
+        },
+        {
+          "url": "https://perfumesdreams.com/ar/-/p1620125623",
+          "kind": "product",
+          "title": "عطر جورجيو أرماني إمبريو أرماني سترونجر وذ يو للرجال | او دو توليت | 100 مل | Giorgio Armani Emporio Armani Stronger With You EDT For Men | PERFUMESDREAMS",
+          "descriptionPresent": true,
+          "wordCount": 502,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Brand",
+            "Offer",
+            "Organization",
+            "Product",
+            "Review"
+          ]
+        },
+        {
+          "url": "https://perfumesdreams.com/ar/-/p334003902",
+          "kind": "product",
+          "title": "عطر شانيل كوكو مادموزيل لو بريفيه او بور لو نايت للنساء | او دو برفيوم | 100 مل | Chanel Coco Mademoiselle L'eau Privee Eau Pour La Nuit EDP For Women | PERFUMESDREAMS",
+          "descriptionPresent": true,
+          "wordCount": 524,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Brand",
+            "Offer",
+            "Organization",
+            "Product",
+            "Review"
+          ]
+        },
+        {
+          "url": "https://perfumesdreams.com/ar/-/p1180414636",
+          "kind": "product",
+          "title": "عطر ديور هيبنوتيك بويزن للنساء | 100 مل | Dior Hypnotic Poison EDP For Women | PERFUMESDREAMS",
+          "descriptionPresent": true,
+          "wordCount": 427,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Brand",
+            "Offer",
+            "Organization",
+            "Product",
+            "Review"
+          ]
+        },
+        {
+          "url": "https://perfumesdreams.com/ar/-/p1826995240",
+          "kind": "product",
+          "title": "عطر ديور جادور للنساء | او دو برفيوم | 100 مل | Dior J'Adore EDP For Women | PERFUMESDREAMS",
+          "descriptionPresent": true,
+          "wordCount": 516,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Brand",
+            "Offer",
+            "Organization",
+            "Product",
+            "Review"
+          ]
+        },
+        {
+          "url": "https://perfumesdreams.com/ar/-/p269304020",
+          "kind": "product",
+          "title": "عطر ديور مس ديور للنساء | او دو برفيوم | 100 مل | Miss Dior Cherie EDP For Women | PERFUMESDREAMS",
+          "descriptionPresent": true,
+          "wordCount": 498,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Brand",
+            "Offer",
+            "Organization",
+            "Product",
+            "Review"
+          ]
+        },
+        {
+          "url": "https://perfumesdreams.com/ar/-/p1647410142",
+          "kind": "product",
+          "title": "عطر كارتير ديكلاريشن للرجال | او دو تواليت | 100 مل | Cartier Declaration EDT For Men | PERFUMESDREAMS",
+          "descriptionPresent": true,
+          "wordCount": 465,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Brand",
+            "Offer",
+            "Organization",
+            "Product",
+            "Review"
+          ]
+        },
+        {
+          "url": "https://perfumesdreams.com/ar/-/p1233133926",
+          "kind": "product",
+          "title": "عطر شانيل ألور أوم سبورت للرجال | او دو تواليت | 100 مل | Chanel Allure Homme Sport EDT For Men | PERFUMESDREAMS",
+          "descriptionPresent": true,
+          "wordCount": 535,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Brand",
+            "Offer",
+            "Organization",
+            "Product",
+            "Review"
+          ]
+        },
+        {
+          "url": "https://perfumesdreams.com/ar/-/p300923121",
+          "kind": "product",
+          "title": "عطر ديور سوفاج للرجال | او دو برفيوم | 100 مل | Dior Sauvage EDP For Men | PERFUMESDREAMS",
+          "descriptionPresent": true,
+          "wordCount": 550,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Brand",
+            "Offer",
+            "Organization",
+            "Product",
+            "Review"
+          ]
+        }
+      ],
+      "keywordOpportunities": [
+        {
+          "keyword": "عطر جورجيو أرماني إمبريو أرماني سترونجر وذ يو للرجال",
+          "intent": "transactional",
+          "targetUrl": "https://perfumesdreams.com/ar/-/p1620125623",
+          "source": "title",
+          "confidence": "high",
+          "rationale": "مرشح مستخرج من العنوان أو H1 الحالي في صفحة منتج؛ يجب التحقق من الطلب والانطباعات داخل أدوات مشرفي بحث غوغل قبل اعتماده."
+        },
+        {
+          "keyword": "عطر شانيل كوكو مادموزيل لو بريفيه او بور لو نايت للنساء",
+          "intent": "transactional",
+          "targetUrl": "https://perfumesdreams.com/ar/-/p334003902",
+          "source": "title",
+          "confidence": "high",
+          "rationale": "مرشح مستخرج من العنوان أو H1 الحالي في صفحة منتج؛ يجب التحقق من الطلب والانطباعات داخل أدوات مشرفي بحث غوغل قبل اعتماده."
+        },
+        {
+          "keyword": "عطر ديور هيبنوتيك بويزن للنساء",
+          "intent": "transactional",
+          "targetUrl": "https://perfumesdreams.com/ar/-/p1180414636",
+          "source": "title",
+          "confidence": "high",
+          "rationale": "مرشح مستخرج من العنوان أو H1 الحالي في صفحة منتج؛ يجب التحقق من الطلب والانطباعات داخل أدوات مشرفي بحث غوغل قبل اعتماده."
+        },
+        {
+          "keyword": "عطر ديور جادور للنساء",
+          "intent": "transactional",
+          "targetUrl": "https://perfumesdreams.com/ar/-/p1826995240",
+          "source": "title",
+          "confidence": "high",
+          "rationale": "مرشح مستخرج من العنوان أو H1 الحالي في صفحة منتج؛ يجب التحقق من الطلب والانطباعات داخل أدوات مشرفي بحث غوغل قبل اعتماده."
+        },
+        {
+          "keyword": "عطر ديور مس ديور للنساء",
+          "intent": "transactional",
+          "targetUrl": "https://perfumesdreams.com/ar/-/p269304020",
+          "source": "title",
+          "confidence": "high",
+          "rationale": "مرشح مستخرج من العنوان أو H1 الحالي في صفحة منتج؛ يجب التحقق من الطلب والانطباعات داخل أدوات مشرفي بحث غوغل قبل اعتماده."
+        },
+        {
+          "keyword": "عطر كارتير ديكلاريشن للرجال",
+          "intent": "transactional",
+          "targetUrl": "https://perfumesdreams.com/ar/-/p1647410142",
+          "source": "title",
+          "confidence": "high",
+          "rationale": "مرشح مستخرج من العنوان أو H1 الحالي في صفحة منتج؛ يجب التحقق من الطلب والانطباعات داخل أدوات مشرفي بحث غوغل قبل اعتماده."
+        },
+        {
+          "keyword": "عطر شانيل ألور أوم سبورت للرجال",
+          "intent": "transactional",
+          "targetUrl": "https://perfumesdreams.com/ar/-/p1233133926",
+          "source": "title",
+          "confidence": "high",
+          "rationale": "مرشح مستخرج من العنوان أو H1 الحالي في صفحة منتج؛ يجب التحقق من الطلب والانطباعات داخل أدوات مشرفي بحث غوغل قبل اعتماده."
+        },
+        {
+          "keyword": "عطر ديور سوفاج للرجال",
+          "intent": "transactional",
+          "targetUrl": "https://perfumesdreams.com/ar/-/p300923121",
+          "source": "title",
+          "confidence": "high",
+          "rationale": "مرشح مستخرج من العنوان أو H1 الحالي في صفحة منتج؛ يجب التحقق من الطلب والانطباعات داخل أدوات مشرفي بحث غوغل قبل اعتماده."
+        }
+      ],
+      "productEnhancements": [
+        {
+          "url": "https://perfumesdreams.com/ar/-/p1620125623",
+          "currentTitle": "عطر جورجيو أرماني إمبريو أرماني سترونجر وذ يو للرجال | او دو توليت | 100 مل | Giorgio Armani Emporio Armani Stronger With You EDT For Men | PERFUMESDREAMS",
+          "targetKeyword": "عطر جورجيو أرماني إمبريو أرماني سترونجر وذ يو للرجال",
+          "suggestedTitle": "عطر جورجيو أرماني إمبريو أرماني سترونجر وذ يو للرجال | perfumesdr",
+          "actions": [
+            "تحقق من هذا المرشح في استعلامات مشرفي بحث غوغل قبل تثبيته كالكلمة الأساسية."
+          ],
+          "evidence": {
+            "descriptionPresent": true,
+            "wordCount": 502,
+            "h1Count": 1,
+            "hasProductSchema": true
+          }
+        },
+        {
+          "url": "https://perfumesdreams.com/ar/-/p334003902",
+          "currentTitle": "عطر شانيل كوكو مادموزيل لو بريفيه او بور لو نايت للنساء | او دو برفيوم | 100 مل | Chanel Coco Mademoiselle L'eau Privee Eau Pour La Nuit EDP For Women | PERFUMESDREAMS",
+          "targetKeyword": "عطر شانيل كوكو مادموزيل لو بريفيه او بور لو نايت للنساء",
+          "suggestedTitle": "عطر شانيل كوكو مادموزيل لو بريفيه او بور لو نايت للنساء | perfume",
+          "actions": [
+            "تحقق من هذا المرشح في استعلامات مشرفي بحث غوغل قبل تثبيته كالكلمة الأساسية."
+          ],
+          "evidence": {
+            "descriptionPresent": true,
+            "wordCount": 524,
+            "h1Count": 1,
+            "hasProductSchema": true
+          }
+        },
+        {
+          "url": "https://perfumesdreams.com/ar/-/p1180414636",
+          "currentTitle": "عطر ديور هيبنوتيك بويزن للنساء | 100 مل | Dior Hypnotic Poison EDP For Women | PERFUMESDREAMS",
+          "targetKeyword": "عطر ديور هيبنوتيك بويزن للنساء",
+          "suggestedTitle": "عطر ديور هيبنوتيك بويزن للنساء | perfumesdreams.com",
+          "actions": [
+            "تحقق من هذا المرشح في استعلامات مشرفي بحث غوغل قبل تثبيته كالكلمة الأساسية."
+          ],
+          "evidence": {
+            "descriptionPresent": true,
+            "wordCount": 427,
+            "h1Count": 1,
+            "hasProductSchema": true
+          }
+        },
+        {
+          "url": "https://perfumesdreams.com/ar/-/p1826995240",
+          "currentTitle": "عطر ديور جادور للنساء | او دو برفيوم | 100 مل | Dior J'Adore EDP For Women | PERFUMESDREAMS",
+          "targetKeyword": "عطر ديور جادور للنساء",
+          "suggestedTitle": "عطر ديور جادور للنساء | perfumesdreams.com",
+          "actions": [
+            "تحقق من هذا المرشح في استعلامات مشرفي بحث غوغل قبل تثبيته كالكلمة الأساسية."
+          ],
+          "evidence": {
+            "descriptionPresent": true,
+            "wordCount": 516,
+            "h1Count": 1,
+            "hasProductSchema": true
+          }
+        },
+        {
+          "url": "https://perfumesdreams.com/ar/-/p269304020",
+          "currentTitle": "عطر ديور مس ديور للنساء | او دو برفيوم | 100 مل | Miss Dior Cherie EDP For Women | PERFUMESDREAMS",
+          "targetKeyword": "عطر ديور مس ديور للنساء",
+          "suggestedTitle": "عطر ديور مس ديور للنساء | perfumesdreams.com",
+          "actions": [
+            "تحقق من هذا المرشح في استعلامات مشرفي بحث غوغل قبل تثبيته كالكلمة الأساسية."
+          ],
+          "evidence": {
+            "descriptionPresent": true,
+            "wordCount": 498,
+            "h1Count": 1,
+            "hasProductSchema": true
+          }
+        }
+      ],
+      "contentOpportunities": [
+        {
+          "type": "buying-guide",
+          "label": "دليل شراء",
+          "targetKeyword": "عطر جورجيو أرماني إمبريو أرماني سترونجر وذ يو للرجال",
+          "workingTitle": "دليل اختيار عطر جورجيو أرماني إمبريو أرماني سترونجر وذ يو للرجال: ما الذي يجب التحقق منه قبل الشراء؟",
+          "sourceUrl": "https://perfumesdreams.com/ar/-/p1620125623",
+          "reason": "يبني على موضوع موجود في الموقع ويجب تحريره بمعلومات أصلية وتجربة أو أدلة حقيقية."
+        },
+        {
+          "type": "comparison",
+          "label": "مقارنة",
+          "targetKeyword": "عطر شانيل كوكو مادموزيل لو بريفيه او بور لو نايت للنساء",
+          "workingTitle": "عطر شانيل كوكو مادموزيل لو بريفيه او بور لو نايت للنساء: مقارنة الخيارات حسب الاحتياج والاستخدام",
+          "sourceUrl": "https://perfumesdreams.com/ar/-/p334003902",
+          "reason": "يبني على موضوع موجود في الموقع ويجب تحريره بمعلومات أصلية وتجربة أو أدلة حقيقية."
+        },
+        {
+          "type": "how-to",
+          "label": "شرح عملي",
+          "targetKeyword": "عطر ديور هيبنوتيك بويزن للنساء",
+          "workingTitle": "كيفية اختيار عطر ديور هيبنوتيك بويزن للنساء واستخدامه بناءً على حقائق المنتج",
+          "sourceUrl": "https://perfumesdreams.com/ar/-/p1180414636",
+          "reason": "يبني على موضوع موجود في الموقع ويجب تحريره بمعلومات أصلية وتجربة أو أدلة حقيقية."
+        },
+        {
+          "type": "faq",
+          "label": "أسئلة شائعة",
+          "targetKeyword": "عطر ديور جادور للنساء",
+          "workingTitle": "أسئلة شائعة عن عطر ديور جادور للنساء: الاختيار والشحن والإرجاع",
+          "sourceUrl": "https://perfumesdreams.com/ar/-/p1826995240",
+          "reason": "يبني على موضوع موجود في الموقع ويجب تحريره بمعلومات أصلية وتجربة أو أدلة حقيقية."
+        }
+      ],
+      "searchConsole": {
+        "status": "not_connected",
+        "property": "sc-domain:perfumesdreams.com",
+        "links": {
+          "console": "https://search.google.com/search-console?resource_id=sc-domain%3Aperfumesdreams.com",
+          "setupGuide": "https://support.google.com/webmasters/answer/34592",
+          "performanceGuide": "https://support.google.com/webmasters/answer/7576553",
+          "urlInspectionGuide": "https://support.google.com/webmasters/answer/9012289",
+          "sitemapsGuide": "https://support.google.com/webmasters/answer/7451001"
+        },
+        "metrics": [
+          {
+            "key": "clicks",
+            "label": "النقرات",
+            "value": null,
+            "status": "not_connected"
+          },
+          {
+            "key": "impressions",
+            "label": "مرات الظهور",
+            "value": null,
+            "status": "not_connected"
+          },
+          {
+            "key": "ctr",
+            "label": "نسبة النقر",
+            "value": null,
+            "status": "not_connected"
+          },
+          {
+            "key": "position",
+            "label": "متوسط الموضع",
+            "value": null,
+            "status": "not_connected"
+          },
+          {
+            "key": "queries",
+            "label": "الاستعلامات",
+            "value": null,
+            "status": "not_connected"
+          },
+          {
+            "key": "pages",
+            "label": "الصفحات",
+            "value": null,
+            "status": "not_connected"
+          }
+        ]
+      }
+    },
+    "limitations": [
+      "هذه نتيجة جاهزية حتمية للموقع وليست قياسًا لترتيب أو ظهور فعلي في Google أو ChatGPT أو Gemini.",
+      "الأدلة الخارجية وبيانات Search Console، بما فيها تقرير أداء الذكاء الاصطناعي التوليدي، غير متاحة في الفحص المجاني ولم تُحسب كفشل.",
+      "حلل الفاحص HTML وXML فقط دون تشغيل JavaScript، وبحد أقصى 10 صفحات؛ تمت قراءة 10 صفحة.",
+      "لا يستطيع هذا الفحص وحده التحقق من أصالة المحتوى أو تجربة الصفحة أو Merchant Center أو Google Business Profile؛ تحتاج هذه العناصر إلى مصادر أو مراجعة إضافية.",
+      "تعذر التحقق من 13 رابطًا مرشحًا، وانعكس ذلك على التغطية والثقة."
+    ],
+    "scannedAt": "2026-07-16T19:39:39.655Z",
+    "pagesScanned": 10
+  },
+  "accessLevel": "full",
+  "expiresAt": "2026-08-15T19:39:39.812Z"
+}

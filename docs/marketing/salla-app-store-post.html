@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>بصيرة — ذكاء التجارة لمتاجر سلة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #171532;
+    --ink-soft: #4b4869;
+    --primary: #4f46e5;
+    --primary-deep: #3b34b8;
+    --primary-soft: #eef0ff;
+    --green: #0e9f6e;
+    --green-soft: #e8f7f1;
+    --amber: #b45309;
+    --amber-soft: #fdf3e3;
+    --bg: #f7f7fc;
+    --card: #ffffff;
+    --line: #e7e6f2;
+    --radius: 22px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "IBM Plex Sans Arabic", "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+  }
+  .post { max-width: 1160px; margin: 0 auto; padding: 56px 40px 72px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    background:
+      radial-gradient(1200px 500px at 85% -10%, rgba(129, 140, 248, .35), transparent 60%),
+      radial-gradient(900px 420px at 10% 110%, rgba(56, 189, 248, .18), transparent 60%),
+      linear-gradient(155deg, #221e5b 0%, #37309b 52%, #4f46e5 100%);
+    border-radius: 32px;
+    padding: 64px 64px 0;
+    color: #fff;
+    overflow: hidden;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,.14);
+    border: 1px solid rgba(255,255,255,.25);
+    backdrop-filter: blur(4px);
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-size: 14px; font-weight: 500;
+  }
+  .hero-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: #34d399; }
+  .brand-row { display: flex; align-items: center; gap: 14px; margin-bottom: 34px; }
+  .brand-logo {
+    width: 54px; height: 54px; border-radius: 16px;
+    background: rgba(255,255,255,.95);
+    display: grid; place-items: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,.25);
+  }
+  .brand-logo svg { display: block; }
+  .brand-name { font-size: 26px; font-weight: 700; letter-spacing: -.5px; }
+  .brand-tag { font-size: 14px; opacity: .8; }
+  .hero h1 {
+    font-size: 46px; font-weight: 700; line-height: 1.35;
+    max-width: 15em; letter-spacing: -1px;
+  }
+  .hero h1 em { font-style: normal; color: #a5f3d0; }
+  .hero p.lead {
+    margin-top: 18px; font-size: 19px; font-weight: 300;
+    max-width: 34em; color: rgba(255,255,255,.88);
+  }
+  .hero-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .chip {
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.22);
+    border-radius: 999px; padding: 7px 16px;
+    font-size: 13.5px; font-weight: 500;
+  }
+  .hero-shot { margin-top: 46px; transform: translateY(6px); }
+
+  /* ---------- Browser frame ---------- */
+  .frame {
+    background: #fff;
+    border-radius: 18px 18px 0 0;
+    box-shadow: 0 -18px 60px rgba(13, 10, 60, .45);
+    overflow: hidden;
+  }
+  .frame.full { border-radius: 18px; box-shadow: 0 24px 70px rgba(38, 33, 120, .16); border: 1px solid var(--line); }
+  .frame-bar {
+    display: flex; align-items: center; gap: 12px;
+    background: #f1f0fa; border-bottom: 1px solid #e3e1f0;
+    padding: 12px 18px;
+  }
+  .frame-dots { display: flex; gap: 7px; }
+  .frame-dots span { width: 11px; height: 11px; border-radius: 50%; }
+  .frame-dots span:nth-child(1) { background: #fca5a5; }
+  .frame-dots span:nth-child(2) { background: #fcd34d; }
+  .frame-dots span:nth-child(3) { background: #86efac; }
+  .frame-url {
+    flex: 1; text-align: center; direction: ltr;
+    background: #fff; border: 1px solid #e3e1f0; border-radius: 8px;
+    font-size: 12.5px; color: #7a77a0; padding: 4px 14px;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+  }
+  .frame img, .frame video { width: 100%; display: block; }
+  .video-note {
+    position: absolute; top: 14px; inset-inline-start: 14px; z-index: 2;
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(23, 21, 50, .82); color: #fff;
+    border-radius: 999px; padding: 7px 16px;
+    font-size: 12.5px; font-weight: 600; backdrop-filter: blur(4px);
+  }
+  .video-note .rec { width: 9px; height: 9px; border-radius: 50%; background: #f87171; }
+  .video-wrap { position: relative; }
+
+  /* ---------- Phone frames (chat closeups) ---------- */
+  .phone {
+    background: #fff;
+    border: 9px solid #1b1846;
+    border-radius: 34px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(38, 33, 120, .22);
+  }
+  .phone img { width: 100%; display: block; }
+  .shot-caption {
+    margin-top: 14px; text-align: center;
+    font-size: 13.5px; font-weight: 600; color: var(--ink-soft);
+  }
+  .chat-exp {
+    display: grid; grid-template-columns: 1.15fr 1fr 1fr;
+    gap: 30px; align-items: start; margin-top: 44px;
+  }
+  .chat-points { display: grid; gap: 14px; margin-top: 22px; list-style: none; }
+  .chat-points li {
+    display: flex; gap: 12px; align-items: flex-start;
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 16px; padding: 14px 16px;
+    font-size: 14.5px; font-weight: 500;
+  }
+  .chat-points .n {
+    flex: none; width: 26px; height: 26px; border-radius: 9px;
+    background: var(--primary); color: #fff;
+    display: grid; place-items: center; font-size: 13px; font-weight: 700;
+  }
+  .chat-points small { display: block; font-weight: 400; color: var(--ink-soft); }
+
+  /* ---------- Gallery ---------- */
+  .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 40px; }
+  .gallery figure { margin: 0; }
+  .gallery figcaption {
+    margin-top: 12px; font-size: 14px; font-weight: 600; color: var(--ink-soft);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .gallery figcaption::before {
+    content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--primary); flex: none;
+  }
+
+  /* ---------- Sections ---------- */
+  .section { margin-top: 84px; }
+  .kicker {
+    display: inline-block; font-size: 14px; font-weight: 600;
+    color: var(--primary); background: var(--primary-soft);
+    border-radius: 999px; padding: 6px 18px; margin-bottom: 14px;
+  }
+  .kicker.green { color: var(--green); background: var(--green-soft); }
+  .kicker.amber { color: var(--amber); background: var(--amber-soft); }
+  .section h2 { font-size: 34px; font-weight: 700; letter-spacing: -.5px; line-height: 1.4; }
+  .section .sub { font-size: 17px; color: var(--ink-soft); max-width: 46em; margin-top: 10px; }
+
+  /* ---------- Benefits grid ---------- */
+  .benefits {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px;
+  }
+  .benefit {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 26px 24px;
+    box-shadow: 0 6px 20px rgba(38, 33, 120, .05);
+  }
+  .benefit .icon {
+    width: 46px; height: 46px; border-radius: 14px;
+    display: grid; place-items: center; margin-bottom: 16px;
+    background: var(--primary-soft); color: var(--primary);
+    font-size: 22px;
+  }
+  .benefit.green .icon { background: var(--green-soft); color: var(--green); }
+  .benefit.amber .icon { background: var(--amber-soft); color: var(--amber); }
+  .benefit h3 { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+  .benefit p { font-size: 14.5px; color: var(--ink-soft); }
+
+  /* ---------- Feature rows ---------- */
+  .feature {
+    display: grid; grid-template-columns: 5fr 7fr; gap: 42px;
+    align-items: center; margin-top: 64px;
+  }
+  .feature.reverse { grid-template-columns: 7fr 5fr; }
+  .feature.reverse .feature-copy { order: 2; }
+  .feature.reverse .feature-shot { order: 1; }
+  .feature h3 { font-size: 26px; font-weight: 700; letter-spacing: -.4px; }
+  .feature p { font-size: 16px; color: var(--ink-soft); margin-top: 10px; }
+  .feature ul { margin-top: 18px; list-style: none; display: grid; gap: 12px; }
+  .feature li {
+    display: flex; gap: 12px; align-items: flex-start;
+    font-size: 15px; font-weight: 500;
+  }
+  .feature li .check {
+    flex: none; width: 24px; height: 24px; border-radius: 50%;
+    background: var(--green-soft); color: var(--green);
+    display: grid; place-items: center; font-size: 13px; font-weight: 700;
+    margin-top: 3px;
+  }
+  .feature li small { display: block; font-weight: 400; color: var(--ink-soft); }
+
+  /* ---------- Steps ---------- */
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+  .step {
+    background: linear-gradient(180deg, #fff, #fbfaff);
+    border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 28px 24px; position: relative;
+  }
+  .step .num {
+    width: 40px; height: 40px; border-radius: 12px;
+    background: var(--primary); color: #fff;
+    display: grid; place-items: center;
+    font-size: 18px; font-weight: 700; margin-bottom: 16px;
+  }
+  .step h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+  .step p { font-size: 14px; color: var(--ink-soft); }
+
+  /* ---------- CTA ---------- */
+  .cta {
+    margin-top: 88px;
+    background: linear-gradient(150deg, #221e5b, #4338ca 70%, #6366f1);
+    border-radius: 32px; padding: 60px 64px;
+    color: #fff; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .cta::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(700px 280px at 50% -30%, rgba(165, 243, 208, .25), transparent 70%);
+  }
+  .cta > * { position: relative; }
+  .cta h2 { font-size: 34px; font-weight: 700; letter-spacing: -.5px; }
+  .cta p { font-size: 17px; margin-top: 12px; color: rgba(255,255,255,.85); }
+  .cta-btn {
+    display: inline-block; margin-top: 30px;
+    background: #fff; color: var(--primary-deep);
+    font-size: 18px; font-weight: 700;
+    border-radius: 999px; padding: 16px 46px;
+    box-shadow: 0 12px 32px rgba(0,0,0,.3);
+  }
+  .cta small { display: block; margin-top: 18px; font-size: 13px; color: rgba(255,255,255,.65); }
+
+  .footnote {
+    margin-top: 40px; font-size: 12.5px; color: #8d8ab0;
+    text-align: center; max-width: 52em; margin-inline: auto;
+  }
+</style>
+</head>
+<body>
+<div class="post">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="brand-row">
+      <div class="brand-logo">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="15" cy="15" r="13" fill="#4F46E5"/>
+          <circle cx="15" cy="15" r="6.5" fill="#fff"/>
+          <circle cx="15" cy="15" r="2.8" fill="#4F46E5"/>
+        </svg>
+      </div>
+      <div>
+        <div class="brand-name">بصيرة</div>
+        <div class="brand-tag">ذكاء التجارة — لمتاجر سلة</div>
+      </div>
+      <div style="margin-inline-start:auto">
+        <span class="hero-badge"><span class="dot"></span> متوفر لمتاجر سلة</span>
+      </div>
+    </div>
+
+    <h1>مستشار ذكي يبيع من بيانات متجرك،<br/>ولوحة تُريك <em>ماذا يريد عملاؤك فعلًا</em></h1>
+    <p class="lead">
+      بصيرة تحوّل محادثات زوارك إلى توصيات منتجات موثّقة، وتحوّل أسئلتهم المتكررة إلى قرارات
+      نمو واضحة — بالعربية أولًا، ومن حقائق متجرك فقط دون اختلاق سعر أو مخزون أو معلومة.
+    </p>
+    <div class="hero-chips">
+      <span class="chip">🤖 مستشار عملاء عربي</span>
+      <span class="chip">🧠 ذكاء العملاء من المحادثات</span>
+      <span class="chip">👁️ جاهزية الظهور بالذكاء الاصطناعي</span>
+      <span class="chip">✍️ استوديو محتوى SEO · AEO · GEO</span>
+    </div>
+
+    <div class="hero-shot">
+      <div class="frame video-wrap">
+        <div class="frame-bar">
+          <div class="frame-dots"><span></span><span></span><span></span></div>
+          <div class="frame-url">basirah.app/dashboard/widget</div>
+        </div>
+        <span class="video-note"><span class="rec"></span> تسجيل حقيقي من المنتج — عميل يسأل، المستشار يرشّح، والهوية تتبدل مباشرة</span>
+        <video autoplay muted loop playsinline poster="media/basirah-demo-poster.jpg">
+          <source src="media/basirah-demo.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ BENEFITS ============ -->
+  <section class="section">
+    <span class="kicker">لماذا بصيرة؟</span>
+    <h2>كل رقم له مصدر، وكل توصية لها سبب</h2>
+    <p class="sub">ليست شات بوت يجامل الزوار — بل طبقة ذكاء كاملة فوق بيانات متجرك في سلة.</p>
+
+    <div class="benefits">
+      <div class="benefit">
+        <div class="icon">💬</div>
+        <h3>يجيب كما يجيب أفضل موظف مبيعات</h3>
+        <p>يفهم سؤال العميل بالعربية (وباللهجة)، يرشّح المنتج المناسب حسب الاحتياج والميزانية، ويشرح لماذا اختاره.</p>
+      </div>
+      <div class="benefit green">
+        <div class="icon">🔒</div>
+        <h3>لا يخترع سعرًا ولا مخزونًا</h3>
+        <p>كل بطاقة منتج يعرضها مأخوذة مباشرة من بيانات متجرك: السعر، التوفر، والسمات الموثّقة فقط.</p>
+      </div>
+      <div class="benefit amber">
+        <div class="icon">📈</div>
+        <h3>يحوّل الأسئلة إلى مبيعات</h3>
+        <p>يرصد ما الذي يمنع الشراء — طريقة استخدام غير واضحة؟ مكونات ناقصة؟ — ويحوّله إلى فرصة قابلة للتنفيذ.</p>
+      </div>
+      <div class="benefit amber">
+        <div class="icon">🎨</div>
+        <h3>بهوية متجرك أنت</h3>
+        <p>استوديو علامة كامل: شعارك، ألوانك، اسم مستشارك، ورسالة ترحيبك — مع معاينة حية قبل أي نشر.</p>
+      </div>
+      <div class="benefit">
+        <div class="icon">👁️</div>
+        <h3>جاهز لعصر البحث بالذكاء الاصطناعي</h3>
+        <p>يفحص هل تستطيع أنظمة الإجابة فهم صفحاتك والاستشهاد بها، ويعطيك خطة إغلاق الفجوات بندًا بندًا.</p>
+      </div>
+      <div class="benefit green">
+        <div class="icon">🛡️</div>
+        <h3>آمن على علامتك</h3>
+        <p>سياسات سلامة مدمجة: لا ادعاءات طبية، لا وعود مضلّلة، وتحويل مهذب لفريقك في الأسئلة الحساسة.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHAT EXPERIENCE ============ -->
+  <section class="section">
+    <span class="kicker">تجربة المحادثة</span>
+    <h2>هكذا تبدو المحادثة لعميلك — خطوة بخطوة</h2>
+    <p class="sub">من أول ترحيب إلى بطاقة المنتج، كل عنصر مصمم ليقود نحو قرار شراء واثق.</p>
+
+    <div class="chat-exp">
+      <div>
+        <ul class="chat-points">
+          <li><span class="n">1</span><div>ترحيب باسم متجرك وأزرار بداية سريعة<small>«ساعدني أختار»، «قارن المنتجات»، «الشحن والاسترجاع» — يبدأ العميل بنقرة واحدة دون حيرة.</small></div></li>
+          <li><span class="n">2</span><div>يفهم الاحتياج والميزانية حتى باللهجة<small>«بشرتي دهنية وميزانيتي 150» تكفي — يستخرج نوع البشرة والميزانية والفئة تلقائيًا.</small></div></li>
+          <li><span class="n">3</span><div>يرشّح «الأنسب» ويشرح السبب<small>«مذكور للبشرة الدهنية» — تبرير حقيقي من سمات المنتج الموثّقة، لا مجاملة عامة.</small></div></li>
+          <li><span class="n">4</span><div>بطاقة منتج تبيع فعلًا<small>السعر الحقيقي، المخزون المتاح «متوفر · 42 قطعة»، وزرا «عرض المنتج» و«أضف للسلة».</small></div></li>
+          <li><span class="n">5</span><div>صادق حين لا يجد إجابة<small>يعتذر بلطف ويقترح توسيع الخيارات أو التحويل لفريق المتجر — وزر «تحدث مع شخص» دائمًا في المتناول.</small></div></li>
+        </ul>
+      </div>
+      <div>
+        <div class="phone"><img src="screenshots/chat-suggestions.png" alt="بداية المحادثة: رسالة ترحيب بهوية المتجر وأزرار اقتراحات سريعة" /></div>
+        <p class="shot-caption">لحظة الفتح: ترحيب + اقتراحات جاهزة</p>
+      </div>
+      <div>
+        <div class="phone"><img src="screenshots/chat-conversation.png" alt="التوصية: بطاقة منتج حقيقية بسعر ومخزون وشارة الأنسب وزر أضف للسلة" /></div>
+        <p class="shot-caption">التوصية: بطاقة موثّقة بشارة «الأنسب»</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURE 1: WIDGET ============ -->
+  <section class="section">
+    <div class="feature">
+      <div class="feature-copy">
+        <span class="kicker">مستشار العملاء</span>
+        <h3>موظف مبيعات لا ينام، على واجهة متجرك</h3>
+        <p>عميلك يكتب «بشرتي دهنية وميزانيتي 150» — والمستشار يرشّح المنتج الصحيح ببطاقة سعر وتوفر حقيقيين، ويضيف البدائل للمقارنة.</p>
+        <ul>
+          <li><span class="check">✓</span><div>فهم عربي للاحتياج والميزانية ونوع البشرة<small>مع أزرار بداية سريعة تناسب متجرك</small></div></li>
+          <li><span class="check">✓</span><div>ترشيح مفلتر من الكتالوج الفعلي<small>لا يظهر منتج غير متوفر أو خارج الشروط</small></div></li>
+          <li><span class="check">✓</span><div>تخصيص كامل للهوية من استوديو العلامة<small>الاسم، الشعار، الألوان، ورسالة الترحيب</small></div></li>
+        </ul>
+      </div>
+      <div class="feature-shot">
+        <div class="frame full">
+          <div class="frame-bar">
+            <div class="frame-dots"><span></span><span></span><span></span></div>
+            <div class="frame-url">basirah.app/dashboard/widget</div>
+          </div>
+          <img src="screenshots/widget.png" alt="استوديو المستشار: معاينة حية للمحادثة وتخصيص الهوية" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BRAND DESIGN ============ -->
+  <section class="section">
+    <span class="kicker amber">هوية المتجر</span>
+    <h2>صمّم المحادثة بشعارك وألوانك — وشاهدها تتغير مباشرة</h2>
+    <p class="sub">غيّر اللون الأساسي إلى لون شعارك، وكل شيء يتبدل أمامك في المعاينة الحية: الرأس، الفقاعات، الأزرار، وزر الإطلاق — قبل أن يراه أي عميل.</p>
+
+    <div style="margin-top: 36px">
+      <div class="frame full">
+        <div class="frame-bar">
+          <div class="frame-dots"><span></span><span></span><span></span></div>
+          <div class="frame-url">basirah.app/dashboard/widget — المظهر</div>
+        </div>
+        <img src="screenshots/brand-recolored.png" alt="استوديو العلامة: تغيير اللون الأساسي إلى لون المتجر وتحول المستشار كاملًا للهوية الجديدة في المعاينة الحية" />
+      </div>
+      <p class="shot-caption">اللون تغيّر إلى ‎#DB2777‎ — والمستشار كله تبع هوية المتجر فورًا، مع اختيار تلقائي للون نص مقروء</p>
+    </div>
+
+    <div class="benefits" style="margin-top: 28px">
+      <div class="benefit amber">
+        <div class="icon">🖼️</div>
+        <h3>شعارك في الواجهة</h3>
+        <p>ارفع شعار متجرك ليظهر في رأس المحادثة وزر الإطلاق، مع اسم مستشار من اختيارك.</p>
+      </div>
+      <div class="benefit">
+        <div class="icon">🎨</div>
+        <h3>ألوان بلا اجتهاد</h3>
+        <p>اختر لونك الأساسي والمساند، والنظام يختار تلقائيًا لون نص مقروءًا فوق ألوان هويتك.</p>
+      </div>
+      <div class="benefit green">
+        <div class="icon">📐</div>
+        <h3>شكل وموضع يناسبانك</h3>
+        <p>استدارة الزوايا (هادئة، متوازنة، دائرية)، وموضع زر المستشار يمين الشاشة أو يسارها.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURE 2: INTELLIGENCE ============ -->
+  <section class="section">
+    <div class="feature reverse">
+      <div class="feature-shot">
+        <div class="frame full">
+          <div class="frame-bar">
+            <div class="frame-dots"><span></span><span></span><span></span></div>
+            <div class="frame-url">basirah.app/dashboard/intelligence</div>
+          </div>
+          <img src="screenshots/intelligence.png" alt="ذكاء العملاء: الاحتياجات والاعتراضات والأسئلة بلا إجابة" />
+        </div>
+      </div>
+      <div class="feature-copy">
+        <span class="kicker green">ذكاء العملاء</span>
+        <h3>اعرف ماذا يريد عملاؤك قبل منافسيك</h3>
+        <p>كل محادثة تتحول إلى إشارة منظمة: احتياجات صاعدة، اعتراضات متكررة، وأسئلة لا يجيب عنها متجرك بعد.</p>
+        <ul>
+          <li><span class="check">✓</span><div>«ما الذي يمنع الشراء؟» مرتبة حسب الأولوية<small>طريقة الاستخدام؟ المكونات؟ السعر مقابل الحجم؟</small></div></li>
+          <li><span class="check">✓</span><div>مواضيع ناشئة قبل أن تصبح اتجاهًا<small>مثل ارتفاع أسئلة البشرة الحساسة أسبوعًا بعد أسبوع</small></div></li>
+          <li><span class="check">✓</span><div>فجوات الطلب: ما يبحث عنه العملاء ولا تملكه<small>إشارات تسعير وتشكيلة مبنية على طلب حقيقي</small></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURE 3: AI VISIBILITY ============ -->
+  <section class="section">
+    <div class="feature">
+      <div class="feature-copy">
+        <span class="kicker amber">الظهور بالذكاء الاصطناعي</span>
+        <h3>عملاؤك بدؤوا يسألون ChatGPT — هل متجرك جاهز؟</h3>
+        <p>بصيرة تفحص جاهزية متجرك للظهور في إجابات الذكاء الاصطناعي عبر SEO وAEO وGEO، وتفصل بوضوح بين الجاهزية والظهور الفعلي — بلا وعود زائفة.</p>
+        <ul>
+          <li><span class="check">✓</span><div>درجة جاهزية من 100 لكل مكوّن<small>البنية، المحتوى، الكيان، الثقة، وقابلية الإجابة</small></div></li>
+          <li><span class="check">✓</span><div>أهم الفجوات مع خطوة الإصلاح التالية<small>مصادر مكونات ناقصة؟ صفحة علامة ضعيفة؟</small></div></li>
+          <li><span class="check">✓</span><div>استوديو محتوى ينتج مقالات مسندة بالأدلة<small>كل ادعاء مربوط بحقيقة موثّقة من متجرك</small></div></li>
+        </ul>
+      </div>
+      <div class="feature-shot">
+        <div class="frame full">
+          <div class="frame-bar">
+            <div class="frame-dots"><span></span><span></span><span></span></div>
+            <div class="frame-url">basirah.app/dashboard/visibility</div>
+          </div>
+          <img src="screenshots/visibility.png" alt="الظهور بالذكاء الاصطناعي: درجة الجاهزية وأهم الفجوات والاتجاه" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="section">
+    <span class="kicker green">جولة أوسع</span>
+    <h2>وهذا ليس كل شيء</h2>
+    <p class="sub">كل شاشة في بصيرة مبنية بنفس المبدأ: عربية أولًا، أرقام لها مصدر، وخطوة تالية واضحة.</p>
+
+    <div class="gallery">
+      <figure>
+        <div class="frame full"><img src="screenshots/conversations.png" alt="سجل المحادثات: كل محادثة موثقة من السؤال حتى النتيجة" /></div>
+        <figcaption>المحادثات — كل حوار موثّق من السؤال حتى النتيجة</figcaption>
+      </figure>
+      <figure>
+        <div class="frame full"><img src="screenshots/opportunities.png" alt="فرص قابلة للتنفيذ مولدة من طلب العملاء الحقيقي" /></div>
+        <figcaption>فرص قابلة للتنفيذ — مولّدة من طلب عملائك الفعلي</figcaption>
+      </figure>
+      <figure>
+        <div class="frame full"><img src="screenshots/products.png" alt="المنتجات والتحسين: جاهزية كل منتج للإجابة والظهور" /></div>
+        <figcaption>المنتجات والتحسين — جاهزية كل منتج للإجابة والظهور</figcaption>
+      </figure>
+      <figure>
+        <div class="frame full"><img src="screenshots/content-studio.png" alt="استوديو المحتوى: مقالات SEO/AEO/GEO مسندة بحقائق المتجر" /></div>
+        <figcaption>استوديو المحتوى — مقالات مسندة بالأدلة قبل النشر</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ STEPS ============ -->
+  <section class="section">
+    <span class="kicker">البداية في دقائق</span>
+    <h2>ثلاث خطوات من التثبيت إلى أول توصية</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>اربط متجرك من سلة</h3>
+        <p>تثبيت بنقرة واحدة من متجر تطبيقات سلة، ومزامنة آمنة لمنتجاتك وبياناتك.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>خصص مستشارك</h3>
+        <p>اسمه، شعارك، ألوانك، ورسالة الترحيب — مع معاينة حية واختبار قبل النشر.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>راقب القرارات لا الأرقام</h3>
+        <p>لوحة عربية تريك الأثر والعائق والخطوة التالية — مع مصدر وفترة واضحة لكل رقم.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta">
+    <h2>جرّب بصيرة على متجرك اليوم</h2>
+    <p>انضم لعصر التجارة الذكية بالعربية — مستشار يبيع، وذكاء يقرر، وجاهزية لعالم يبحث بالذكاء الاصطناعي.</p>
+    <span class="cta-btn">ثبّت بصيرة من متجر تطبيقات سلة ←</span>
+    <small>إعداد يستغرق دقائق · دعم عربي · بياناتك تبقى بياناتك</small>
+  </section>
+
+  <p class="footnote">
+    الفيديو ولقطات الشاشة أعلاه مسجلة من منتج بصيرة الفعلي دون مونتاج، على بيانات متجر تجريبي مُعلَّم بوضوح.
+    درجات الجاهزية فحوصات قابلة للتحقق على محتوى متجرك، ولا تضمن بصيرة ترتيبًا أو ظهورًا محددًا في أي محرك بحث
+    أو منصة ذكاء اصطناعي.
+  </p>
+
+</div>
+</body>
+</html>

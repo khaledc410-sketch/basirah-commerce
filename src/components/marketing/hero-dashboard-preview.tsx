@@ -1,0 +1,21 @@
+import Image from "next/image";
+import { ArrowUpLeft, CircleAlert, Eye, Lightbulb, MessageCircleMore, ShoppingBag, Sparkles, TrendingUp } from "lucide-react";
+
+import { Badge } from "@/components/ui/badge";
+
+export function HeroDashboardPreview() {
+  return (
+    <div className="relative mx-auto w-full max-w-[660px]" dir="rtl">
+      <div className="absolute -inset-5 -z-10 rounded-[40px] bg-primary/10 blur-3xl" />
+      <div className="overflow-hidden rounded-[26px] border bg-card shadow-2xl shadow-primary/10">
+        <div className="flex min-h-14 items-center justify-between border-b px-4"><div className="flex items-center gap-2"><span className="size-2.5 rounded-full bg-success" /><span className="text-xs font-semibold">مَدى للعناية</span><Badge className="h-5 text-[9px]" variant="outline">عرض تجريبي</Badge></div><div className="flex gap-1.5"><span className="size-2 rounded-full bg-muted-foreground/30" /><span className="size-2 rounded-full bg-muted-foreground/30" /><span className="size-2 rounded-full bg-muted-foreground/30" /></div></div>
+        <div className="grid min-h-[470px] grid-cols-[110px_1fr] sm:grid-cols-[150px_1fr]"><aside className="border-e bg-muted/25 p-3"><div className="mb-5 flex items-center gap-2 rounded-lg bg-primary/10 px-2 py-2 text-[10px] font-semibold text-primary"><Sparkles className="size-3.5" />الرئيسية</div>{["المحادثات", "ذكاء العملاء", "المنتجات", "الظهور", "الفرص"].map((item) => <div className="mb-2 px-2 py-2 text-[9px] text-muted-foreground" key={item}>{item}</div>)}</aside><div className="min-w-0 p-3 sm:p-5"><div className="flex items-start justify-between"><div><p className="text-[9px] text-muted-foreground">آخر 7 أيام</p><h2 className="mt-1 text-base font-semibold sm:text-lg">ماذا يستحق انتباهك؟</h2></div><span className="rounded-md border px-2 py-1 text-[8px] text-muted-foreground">5–11 يوليو</span></div>
+          <div className="mt-4 grid gap-3 sm:grid-cols-[1.3fr_.7fr]"><div className="rounded-xl bg-primary p-4 text-primary-foreground"><p className="text-[9px] opacity-75">مبيعات مباشرة بمساعدة المستشار</p><p className="metric-numbers mt-2 text-2xl font-semibold sm:text-3xl">18,420 ر.س</p><p className="mt-2 flex items-center gap-1 text-[9px] opacity-80"><TrendingUp className="size-3" />+18٪ عن الفترة السابقة</p></div><div className="rounded-xl border p-3"><div className="flex items-center justify-between"><Eye className="size-4 text-primary" /><span className="metric-numbers text-sm font-semibold">76/100</span></div><p className="mt-4 text-[9px] font-semibold">جاهزية الظهور</p><p className="mt-1 text-[8px] text-muted-foreground">منفصلة عن الظهور الفعلي</p></div></div>
+          <div className="mt-3 rounded-xl border p-4"><div className="flex gap-3"><span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-warning-soft text-warning"><CircleAlert className="size-4" /></span><div><p className="text-[10px] font-semibold">طريقة الاستخدام تمنع بعض العملاء من الشراء</p><p className="mt-1 text-[8px] leading-relaxed text-muted-foreground">34 سؤالًا متكررًا · التحويل أقل من متوسط الفئة بـ18٪</p></div><ArrowUpLeft className="ms-auto size-4 text-muted-foreground" /></div></div>
+          <div className="mt-3 grid grid-cols-3 gap-2">{[{ icon: MessageCircleMore, label: "محادثات", value: "1,248" }, { icon: ShoppingBag, label: "إلى السلة", value: "18.7٪" }, { icon: Lightbulb, label: "فرص", value: "3" }].map((metric) => <div className="rounded-xl bg-muted/50 p-3" key={metric.label}><metric.icon className="size-3.5 text-primary" /><p className="metric-numbers mt-3 text-sm font-semibold">{metric.value}</p><p className="text-[8px] text-muted-foreground">{metric.label}</p></div>)}</div>
+          <div className="mt-3 flex items-center gap-2 rounded-xl border p-2"><div className="flex -space-x-2 space-x-reverse">{["/demo/products/serum.svg", "/demo/products/cleanser.svg", "/demo/products/moisturizer.svg"].map((src) => <div className="relative size-9 overflow-hidden rounded-lg border-2 border-card" key={src}><Image alt="" fill sizes="36px" src={src} className="object-cover" /></div>)}</div><div><p className="text-[9px] font-semibold">أعلى المنتجات ترشيحًا</p><p className="text-[8px] text-muted-foreground">من الكتالوج الموحّد والمتوفر</p></div></div>
+        </div></div>
+      </div>
+    </div>
+  );
+}

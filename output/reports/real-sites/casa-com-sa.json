@@ -1,0 +1,603 @@
+{
+  "report": {
+    "domain": "casa.com.sa",
+    "score": 82,
+    "coverage": 95,
+    "confidence": 95,
+    "components": [
+      {
+        "key": "technical",
+        "label": "الجاهزية التقنية",
+        "weight": 25,
+        "score": 100,
+        "coverage": 100
+      },
+      {
+        "key": "content",
+        "label": "قيمة المحتوى واكتماله",
+        "weight": 30,
+        "score": 100,
+        "coverage": 100
+      },
+      {
+        "key": "entity",
+        "label": "وضوح العلامة والكيان",
+        "weight": 10,
+        "score": 0,
+        "coverage": 100
+      },
+      {
+        "key": "trust",
+        "label": "الثقة والسلطة",
+        "weight": 15,
+        "score": 50,
+        "coverage": 100
+      },
+      {
+        "key": "answerability",
+        "label": "الوضوح والفائدة للقارئ",
+        "weight": 10,
+        "score": 100,
+        "coverage": 100
+      },
+      {
+        "key": "structuredData",
+        "label": "البيانات المنظمة",
+        "weight": 5,
+        "score": 100,
+        "coverage": 100
+      },
+      {
+        "key": "externalEvidence",
+        "label": "الأدلة الخارجية",
+        "weight": 5,
+        "score": null,
+        "coverage": 0
+      }
+    ],
+    "findings": [
+      {
+        "id": "finding-trust-contact-details",
+        "component": "trust",
+        "title": "بيانات التواصل غير واضحة",
+        "description": "لا يستطيع الزائر أو محرك الإجابة استخراج وسيلة اتصال مباشرة.",
+        "severity": "medium",
+        "recommendation": "أضف بيانات تواصل صحيحة ومتسقة في صفحة التواصل والتذييل.",
+        "evidenceIds": [
+          "ev-trust-contact-details"
+        ]
+      },
+      {
+        "id": "finding-entity-identity-page",
+        "component": "entity",
+        "title": "سياق العلامة محدود",
+        "description": "لا تظهر صفحة تعريف أو تواصل واضحة في الروابط التي اكتشفناها.",
+        "severity": "low",
+        "recommendation": "أنشئ صفحة من نحن موثقة وصفحة تواصل واربطهما من التنقل الرئيسي أو التذييل.",
+        "evidenceIds": [
+          "ev-entity-identity-page"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev-technical-crawlable-pages",
+        "component": "technical",
+        "checkKey": "crawlable-pages",
+        "status": "pass",
+        "message": "تمكنت بصيرة من قراءة 10 صفحة HTML عامة.",
+        "urls": []
+      },
+      {
+        "id": "ev-technical-googlebot-root-access",
+        "component": "technical",
+        "checkKey": "googlebot-root-access",
+        "status": "pass",
+        "message": "يسمح robots.txt لـ Googlebot بقراءة الصفحة الرئيسية.",
+        "urls": [
+          "https://casa.com.sa/"
+        ]
+      },
+      {
+        "id": "ev-technical-oai-searchbot-root-access",
+        "component": "technical",
+        "checkKey": "oai-searchbot-root-access",
+        "status": "pass",
+        "message": "يسمح robots.txt لـ OAI-SearchBot بقراءة الصفحة الرئيسية.",
+        "urls": [
+          "https://casa.com.sa/"
+        ]
+      },
+      {
+        "id": "ev-externalEvidence-gptbot-training-control",
+        "component": "externalEvidence",
+        "checkKey": "gptbot-training-control",
+        "status": "unknown",
+        "message": "GPTBot مسموح على الصفحة الرئيسية؛ هذا إعداد تدريب محتمل ولا يقيس ظهور بحث ChatGPT.",
+        "urls": [
+          "https://casa.com.sa/"
+        ]
+      },
+      {
+        "id": "ev-externalEvidence-google-extended-training-control",
+        "component": "externalEvidence",
+        "checkKey": "google-extended-training-control",
+        "status": "unknown",
+        "message": "Google-Extended مسموح على الصفحة الرئيسية؛ هذا تحكم في استخدامات Gemini وليس شرطًا لميزات Google Search.",
+        "urls": [
+          "https://casa.com.sa/"
+        ]
+      },
+      {
+        "id": "ev-technical-root-indexability",
+        "component": "technical",
+        "checkKey": "root-indexability",
+        "status": "pass",
+        "message": "لم تعلن الصفحة الرئيسية توجيه noindex.",
+        "urls": []
+      },
+      {
+        "id": "ev-technical-sitemap",
+        "component": "technical",
+        "checkKey": "sitemap",
+        "status": "pass",
+        "message": "عُثر على خريطة موقع تضم 273 رابطًا.",
+        "urls": []
+      },
+      {
+        "id": "ev-technical-canonical-coverage",
+        "component": "technical",
+        "checkKey": "canonical-coverage",
+        "status": "pass",
+        "message": "100٪ من الصفحات المفحوصة تعلن canonical.",
+        "urls": []
+      },
+      {
+        "id": "ev-content-metadata-coverage",
+        "component": "content",
+        "checkKey": "metadata-coverage",
+        "status": "pass",
+        "message": "100٪ من الصفحات لديها عنوان ووصف تعريفيان.",
+        "urls": []
+      },
+      {
+        "id": "ev-content-language-coverage",
+        "component": "content",
+        "checkKey": "language-coverage",
+        "status": "pass",
+        "message": "100٪ من الصفحات تحتوي محتوى عربيًا جوهريًا.",
+        "urls": []
+      },
+      {
+        "id": "ev-content-content-depth",
+        "component": "content",
+        "checkKey": "content-depth",
+        "status": "unknown",
+        "message": "سُجل حجم النص المرئي كدليل سياقي فقط؛ لا يوجد طول مثالي ثابت للصفحة، ولا يمكن للفاحص الحتمي وحده الحكم على أصالة المحتوى أو فائدته.",
+        "urls": [
+          "https://casa.com.sa/",
+          "https://casa.com.sa/ar/p577803892/p577803892",
+          "https://casa.com.sa/en/p577803892/p577803892",
+          "https://casa.com.sa/ar/p1477166950/p1477166950",
+          "https://casa.com.sa/en/p1477166950/p1477166950",
+          "https://casa.com.sa/ar/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A7%D8%AA-99/c837266632",
+          "https://casa.com.sa/en/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A7%D8%AA-99/c837266632",
+          "https://casa.com.sa/ar/c81492133/c81492133",
+          "https://casa.com.sa/ar/1830045612/page-1830045612",
+          "https://casa.com.sa/en/1830045612/page-1830045612"
+        ]
+      },
+      {
+        "id": "ev-structuredData-organization-schema",
+        "component": "structuredData",
+        "checkKey": "organization-schema",
+        "status": "pass",
+        "message": "عُثر على كيان Organization أو LocalBusiness منظم.",
+        "urls": []
+      },
+      {
+        "id": "ev-entity-identity-page",
+        "component": "entity",
+        "checkKey": "identity-page",
+        "status": "fail",
+        "message": "لم يظهر رابط واضح لصفحة من نحن أو التواصل.",
+        "urls": []
+      },
+      {
+        "id": "ev-trust-policy-coverage",
+        "component": "trust",
+        "checkKey": "policy-coverage",
+        "status": "pass",
+        "message": "عُثر على 4 من أنواع صفحات السياسات الأساسية.",
+        "urls": []
+      },
+      {
+        "id": "ev-trust-contact-details",
+        "component": "trust",
+        "checkKey": "contact-details",
+        "status": "fail",
+        "message": "لم نعثر على بريد أو هاتف واضح في الصفحات المفحوصة.",
+        "urls": []
+      },
+      {
+        "id": "ev-answerability-heading-structure",
+        "component": "answerability",
+        "checkKey": "heading-structure",
+        "status": "pass",
+        "message": "100٪ من الصفحات تستخدم عنوان H1 واحدًا.",
+        "urls": []
+      },
+      {
+        "id": "ev-answerability-question-content",
+        "component": "answerability",
+        "checkKey": "question-content",
+        "status": "unknown",
+        "message": "لم نعثر على أسئلة أو FAQ؛ لا يُعد غيابها فشلًا لأن Google لا يشترط صيغة سؤال وجواب للبحث التوليدي.",
+        "urls": []
+      },
+      {
+        "id": "ev-structuredData-jsonld-validity",
+        "component": "structuredData",
+        "checkKey": "jsonld-validity",
+        "status": "pass",
+        "message": "100٪ من الصفحات تحتوي JSON-LD صالحًا.",
+        "urls": []
+      },
+      {
+        "id": "ev-structuredData-product-schema",
+        "component": "structuredData",
+        "checkKey": "product-schema",
+        "status": "pass",
+        "message": "عُثر على Product schema ضمن العينة.",
+        "urls": []
+      },
+      {
+        "id": "ev-externalEvidence-external-mentions",
+        "component": "externalEvidence",
+        "checkKey": "external-mentions",
+        "status": "unknown",
+        "message": "لا يقيس فحص الموقع وحده الإشارات أو الاستشهادات الخارجية.",
+        "urls": []
+      }
+    ],
+    "organicGrowthPlan": {
+      "source": "deterministic-public-pages",
+      "keywordMethod": "مرشحات موضوعية من عناوين الصفحات والعنوان الرئيسي في العينة؛ لا تتضمن حجم البحث أو صعوبة الكلمة قبل ربط مشرفي بحث غوغل أو مصدر كلمات موثوق.",
+      "pageSnapshots": [
+        {
+          "url": "https://casa.com.sa/",
+          "kind": "home",
+          "title": "كازا جمالك يبدأ من هنا أفضل منتجات العناية بالبشرة والشعر",
+          "descriptionPresent": true,
+          "wordCount": 297,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Organization"
+          ]
+        },
+        {
+          "url": "https://casa.com.sa/ar/p577803892/p577803892",
+          "kind": "product",
+          "title": "شامبو بلاتينيوم سلفر لإزالة اصفرار الشعر الأشقر من كازا – 350 مل | كازا",
+          "descriptionPresent": true,
+          "wordCount": 440,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Brand",
+            "Offer",
+            "Organization",
+            "Product",
+            "Review"
+          ]
+        },
+        {
+          "url": "https://casa.com.sa/en/p577803892/p577803892",
+          "kind": "product",
+          "title": "شامبو بلاتينيوم سلفر لإزالة اصفرار الشعر الأشقر من كازا – 350 مل | كازا",
+          "descriptionPresent": true,
+          "wordCount": 444,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Brand",
+            "Offer",
+            "Organization",
+            "Product",
+            "Review"
+          ]
+        },
+        {
+          "url": "https://casa.com.sa/ar/p1477166950/p1477166950",
+          "kind": "product",
+          "title": "بلسم كازا بزيت الأرجان الطبيعي للشعر الجاف والتالف – 500 مل | كازا",
+          "descriptionPresent": true,
+          "wordCount": 454,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Brand",
+            "Offer",
+            "Organization",
+            "Product",
+            "Review"
+          ]
+        },
+        {
+          "url": "https://casa.com.sa/en/p1477166950/p1477166950",
+          "kind": "product",
+          "title": "بلسم كازا بزيت الأرجان الطبيعي للشعر الجاف والتالف – 500 مل | كازا",
+          "descriptionPresent": true,
+          "wordCount": 458,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Brand",
+            "Offer",
+            "Organization",
+            "Product",
+            "Review"
+          ]
+        },
+        {
+          "url": "https://casa.com.sa/ar/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A7%D8%AA-99/c837266632",
+          "kind": "category",
+          "title": "مجموعات 99 | كازا",
+          "descriptionPresent": true,
+          "wordCount": 338,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Organization"
+          ]
+        },
+        {
+          "url": "https://casa.com.sa/en/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A7%D8%AA-99/c837266632",
+          "kind": "category",
+          "title": "مجموعات 99 | كازا",
+          "descriptionPresent": true,
+          "wordCount": 341,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Organization"
+          ]
+        },
+        {
+          "url": "https://casa.com.sa/ar/c81492133/c81492133",
+          "kind": "category",
+          "title": "مجموعات العناية بالبشرة والشعر الطبيعية | حلول متكاملة لصحة وجمال شعرك وبشرتك | كازا",
+          "descriptionPresent": true,
+          "wordCount": 345,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Organization"
+          ]
+        },
+        {
+          "url": "https://casa.com.sa/ar/1830045612/page-1830045612",
+          "kind": "other",
+          "title": "كازا للعناية بالبشرة والشعر الأصلية - كازا جمالك يبدأ من هنا أفضل منتجات العناية بالبشرة والشعر",
+          "descriptionPresent": true,
+          "wordCount": 369,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Organization"
+          ]
+        },
+        {
+          "url": "https://casa.com.sa/en/1830045612/page-1830045612",
+          "kind": "other",
+          "title": "كازا للعناية بالبشرة والشعر الأصلية - كازا جمالك يبدأ من هنا أفضل منتجات العناية بالبشرة والشعر",
+          "descriptionPresent": true,
+          "wordCount": 372,
+          "h1Count": 1,
+          "questionHeadingCount": 0,
+          "structuredDataTypes": [
+            "Organization"
+          ]
+        }
+      ],
+      "keywordOpportunities": [
+        {
+          "keyword": "شامبو بلاتينيوم سلفر لإزالة اصفرار الشعر الأشقر من كازا",
+          "intent": "transactional",
+          "targetUrl": "https://casa.com.sa/ar/p577803892/p577803892",
+          "source": "title",
+          "confidence": "high",
+          "rationale": "مرشح مستخرج من العنوان أو H1 الحالي في صفحة منتج؛ يجب التحقق من الطلب والانطباعات داخل أدوات مشرفي بحث غوغل قبل اعتماده."
+        },
+        {
+          "keyword": "بلسم كازا بزيت الأرجان الطبيعي للشعر الجاف والتالف",
+          "intent": "transactional",
+          "targetUrl": "https://casa.com.sa/ar/p1477166950/p1477166950",
+          "source": "title",
+          "confidence": "high",
+          "rationale": "مرشح مستخرج من العنوان أو H1 الحالي في صفحة منتج؛ يجب التحقق من الطلب والانطباعات داخل أدوات مشرفي بحث غوغل قبل اعتماده."
+        },
+        {
+          "keyword": "مجموعات 99",
+          "intent": "commercial",
+          "targetUrl": "https://casa.com.sa/ar/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A7%D8%AA-99/c837266632",
+          "source": "title",
+          "confidence": "high",
+          "rationale": "مرشح مستخرج من العنوان أو H1 الحالي في صفحة فئة؛ يجب التحقق من الطلب والانطباعات داخل أدوات مشرفي بحث غوغل قبل اعتماده."
+        },
+        {
+          "keyword": "حلول متكاملة لصحة وجمال شعرك وبشرتك",
+          "intent": "commercial",
+          "targetUrl": "https://casa.com.sa/ar/c81492133/c81492133",
+          "source": "title",
+          "confidence": "high",
+          "rationale": "مرشح مستخرج من العنوان أو H1 الحالي في صفحة فئة؛ يجب التحقق من الطلب والانطباعات داخل أدوات مشرفي بحث غوغل قبل اعتماده."
+        },
+        {
+          "keyword": "كازا جمالك يبدأ من هنا أفضل منتجات العناية بالبشرة والشعر",
+          "intent": "navigational",
+          "targetUrl": "https://casa.com.sa/",
+          "source": "title",
+          "confidence": "high",
+          "rationale": "مرشح مستخرج من العنوان أو H1 الحالي في صفحة الموقع؛ يجب التحقق من الطلب والانطباعات داخل أدوات مشرفي بحث غوغل قبل اعتماده."
+        }
+      ],
+      "productEnhancements": [
+        {
+          "url": "https://casa.com.sa/ar/p577803892/p577803892",
+          "currentTitle": "شامبو بلاتينيوم سلفر لإزالة اصفرار الشعر الأشقر من كازا – 350 مل | كازا",
+          "targetKeyword": "شامبو بلاتينيوم سلفر لإزالة اصفرار الشعر الأشقر من كازا",
+          "suggestedTitle": "شامبو بلاتينيوم سلفر لإزالة اصفرار الشعر الأشقر من كازا | casa.co",
+          "actions": [
+            "تحقق من هذا المرشح في استعلامات مشرفي بحث غوغل قبل تثبيته كالكلمة الأساسية."
+          ],
+          "evidence": {
+            "descriptionPresent": true,
+            "wordCount": 440,
+            "h1Count": 1,
+            "hasProductSchema": true
+          }
+        },
+        {
+          "url": "https://casa.com.sa/en/p577803892/p577803892",
+          "currentTitle": "شامبو بلاتينيوم سلفر لإزالة اصفرار الشعر الأشقر من كازا – 350 مل | كازا",
+          "targetKeyword": "شامبو بلاتينيوم سلفر لإزالة اصفرار الشعر الأشقر من كازا",
+          "suggestedTitle": "شامبو بلاتينيوم سلفر لإزالة اصفرار الشعر الأشقر من كازا | casa.co",
+          "actions": [
+            "تحقق من هذا المرشح في استعلامات مشرفي بحث غوغل قبل تثبيته كالكلمة الأساسية."
+          ],
+          "evidence": {
+            "descriptionPresent": true,
+            "wordCount": 444,
+            "h1Count": 1,
+            "hasProductSchema": true
+          }
+        },
+        {
+          "url": "https://casa.com.sa/ar/p1477166950/p1477166950",
+          "currentTitle": "بلسم كازا بزيت الأرجان الطبيعي للشعر الجاف والتالف – 500 مل | كازا",
+          "targetKeyword": "بلسم كازا بزيت الأرجان الطبيعي للشعر الجاف والتالف",
+          "suggestedTitle": "بلسم كازا بزيت الأرجان الطبيعي للشعر الجاف والتالف | casa.com.sa",
+          "actions": [
+            "تحقق من هذا المرشح في استعلامات مشرفي بحث غوغل قبل تثبيته كالكلمة الأساسية."
+          ],
+          "evidence": {
+            "descriptionPresent": true,
+            "wordCount": 454,
+            "h1Count": 1,
+            "hasProductSchema": true
+          }
+        },
+        {
+          "url": "https://casa.com.sa/en/p1477166950/p1477166950",
+          "currentTitle": "بلسم كازا بزيت الأرجان الطبيعي للشعر الجاف والتالف – 500 مل | كازا",
+          "targetKeyword": "بلسم كازا بزيت الأرجان الطبيعي للشعر الجاف والتالف",
+          "suggestedTitle": "بلسم كازا بزيت الأرجان الطبيعي للشعر الجاف والتالف | casa.com.sa",
+          "actions": [
+            "تحقق من هذا المرشح في استعلامات مشرفي بحث غوغل قبل تثبيته كالكلمة الأساسية."
+          ],
+          "evidence": {
+            "descriptionPresent": true,
+            "wordCount": 458,
+            "h1Count": 1,
+            "hasProductSchema": true
+          }
+        }
+      ],
+      "contentOpportunities": [
+        {
+          "type": "buying-guide",
+          "label": "دليل شراء",
+          "targetKeyword": "شامبو بلاتينيوم سلفر لإزالة اصفرار الشعر الأشقر من كازا",
+          "workingTitle": "دليل اختيار شامبو بلاتينيوم سلفر لإزالة اصفرار الشعر الأشقر من كازا: ما الذي يجب التحقق منه قبل الشراء؟",
+          "sourceUrl": "https://casa.com.sa/ar/p577803892/p577803892",
+          "reason": "يبني على موضوع موجود في الموقع ويجب تحريره بمعلومات أصلية وتجربة أو أدلة حقيقية."
+        },
+        {
+          "type": "comparison",
+          "label": "مقارنة",
+          "targetKeyword": "بلسم كازا بزيت الأرجان الطبيعي للشعر الجاف والتالف",
+          "workingTitle": "بلسم كازا بزيت الأرجان الطبيعي للشعر الجاف والتالف: مقارنة الخيارات حسب الاحتياج والاستخدام",
+          "sourceUrl": "https://casa.com.sa/ar/p1477166950/p1477166950",
+          "reason": "يبني على موضوع موجود في الموقع ويجب تحريره بمعلومات أصلية وتجربة أو أدلة حقيقية."
+        },
+        {
+          "type": "how-to",
+          "label": "شرح عملي",
+          "targetKeyword": "مجموعات 99",
+          "workingTitle": "كيفية اختيار مجموعات 99 واستخدامه بناءً على حقائق المنتج",
+          "sourceUrl": "https://casa.com.sa/ar/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A7%D8%AA-99/c837266632",
+          "reason": "يبني على موضوع موجود في الموقع ويجب تحريره بمعلومات أصلية وتجربة أو أدلة حقيقية."
+        },
+        {
+          "type": "faq",
+          "label": "أسئلة شائعة",
+          "targetKeyword": "حلول متكاملة لصحة وجمال شعرك وبشرتك",
+          "workingTitle": "أسئلة شائعة عن حلول متكاملة لصحة وجمال شعرك وبشرتك: الاختيار والشحن والإرجاع",
+          "sourceUrl": "https://casa.com.sa/ar/c81492133/c81492133",
+          "reason": "يبني على موضوع موجود في الموقع ويجب تحريره بمعلومات أصلية وتجربة أو أدلة حقيقية."
+        }
+      ],
+      "searchConsole": {
+        "status": "not_connected",
+        "property": "sc-domain:casa.com.sa",
+        "links": {
+          "console": "https://search.google.com/search-console?resource_id=sc-domain%3Acasa.com.sa",
+          "setupGuide": "https://support.google.com/webmasters/answer/34592",
+          "performanceGuide": "https://support.google.com/webmasters/answer/7576553",
+          "urlInspectionGuide": "https://support.google.com/webmasters/answer/9012289",
+          "sitemapsGuide": "https://support.google.com/webmasters/answer/7451001"
+        },
+        "metrics": [
+          {
+            "key": "clicks",
+            "label": "النقرات",
+            "value": null,
+            "status": "not_connected"
+          },
+          {
+            "key": "impressions",
+            "label": "مرات الظهور",
+            "value": null,
+            "status": "not_connected"
+          },
+          {
+            "key": "ctr",
+            "label": "نسبة النقر",
+            "value": null,
+            "status": "not_connected"
+          },
+          {
+            "key": "position",
+            "label": "متوسط الموضع",
+            "value": null,
+            "status": "not_connected"
+          },
+          {
+            "key": "queries",
+            "label": "الاستعلامات",
+            "value": null,
+            "status": "not_connected"
+          },
+          {
+            "key": "pages",
+            "label": "الصفحات",
+            "value": null,
+            "status": "not_connected"
+          }
+        ]
+      }
+    },
+    "limitations": [
+      "هذه نتيجة جاهزية حتمية للموقع وليست قياسًا لترتيب أو ظهور فعلي في Google أو ChatGPT أو Gemini.",
+      "الأدلة الخارجية وبيانات Search Console، بما فيها تقرير أداء الذكاء الاصطناعي التوليدي، غير متاحة في الفحص المجاني ولم تُحسب كفشل.",
+      "حلل الفاحص HTML وXML فقط دون تشغيل JavaScript، وبحد أقصى 10 صفحات؛ تمت قراءة 10 صفحة.",
+      "لا يستطيع هذا الفحص وحده التحقق من أصالة المحتوى أو تجربة الصفحة أو Merchant Center أو Google Business Profile؛ تحتاج هذه العناصر إلى مصادر أو مراجعة إضافية."
+    ],
+    "scannedAt": "2026-07-16T19:39:54.208Z",
+    "pagesScanned": 10
+  },
+  "accessLevel": "full",
+  "expiresAt": "2026-08-15T19:39:54.250Z"
+}
