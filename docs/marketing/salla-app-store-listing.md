@@ -24,7 +24,21 @@ node docs/marketing/salla-app-listing/generate.mjs
 | نوع التطبيق | عام | Public |
 | الفئة | عام / التسويق والمبيعات | General / Marketing & Sales |
 
-تُضاف روابط الموقع والدعم والخصوصية والشروط بعد تثبيت نطاق Vercel الإنتاجي. لا تستخدم رابط معاينة مؤقتًا في طلب النشر.
+## روابط الإنتاج الجاهزة للبوابة
+
+| الاستخدام | الرابط |
+| --- | --- |
+| الموقع العربي | `https://basirah-commerce.vercel.app/ar` |
+| الموقع الإنجليزي | `https://basirah-commerce.vercel.app/en` |
+| الدعم | `https://basirah-commerce.vercel.app/ar/support` |
+| سياسة الخصوصية | `https://basirah-commerce.vercel.app/ar/privacy` |
+| الشروط والأحكام | `https://basirah-commerce.vercel.app/ar/terms` |
+| رد OAuth | `https://basirah-commerce.vercel.app/api/oauth/salla/callback` |
+| Webhook | `https://basirah-commerce.vercel.app/api/webhooks/salla` |
+| صفحة التطبيق المضمّن | `https://basirah-commerce.vercel.app/salla/embedded` |
+| المستودع العام | `https://github.com/khaledc410-sketch/basirah-commerce` |
+
+استخدم النطاق الثابت أعلاه في طلب النشر، وليس رابط معاينة خاصًا بعملية نشر واحدة.
 
 ## الوصف المختصر (سطر واحد)
 
